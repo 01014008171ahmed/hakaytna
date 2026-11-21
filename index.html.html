@@ -1,0 +1,1981 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<script>
+window.contextInfo = {"files":[],"materials":[],"crafts":[]};
+// Safe anchor smooth scrolling
+document.addEventListener('click', function(e) {
+  var anchor = e.target.closest('a');
+  if (anchor) {
+    var href = anchor.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      var targetId = href.slice(1);
+      var target = document.getElementById(targetId);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
+});
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حكايتنا الحلوة — أحمد حسام و أروى</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;600;700;800&display=swap');
+:root{--ink:#f8eee8;--muted:#cbbdb8;--pink:#f3b0ad;--wine:#d86872;--line:rgba(255,236,227,.18)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#211b24;color:var(--ink);font-family:'Cairo',sans-serif;overflow-x:hidden}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,textarea:focus-visible,a:focus-visible{outline:2px solid #ffc2bc;outline-offset:4px}
+.page{max-width:1512px;margin:auto}
+
+.nav{height:90px;display:flex;align-items:center;justify-content:space-between;padding:0 6%;border-bottom:1px solid var(--line);position:relative;z-index:3;background:#211b24}
+.brand{font-family:'Amiri',serif;font-size:24px;color:#ffe6dc}
+.brand span{color:var(--pink)}
+.navlinks{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.navlinks a{color:#e6d8d0;text-decoration:none;font-size:12px;transition:color .2s}
+.navlinks a:hover{color:#f6b7b1}
+.pill{border:1px solid #9e7777;border-radius:100px;background:transparent;color:#f6d5ce;padding:8px 16px;font-size:12px;transition:background .2s}
+.pill:hover{background:#ffffff0c}
+
+.hero{min-height:620px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6%;padding:65px 11% 95px;position:relative;isolation:isolate}
+.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 73% 48%,#68404780 0,transparent 46%),radial-gradient(ellipse at 26% 45%,#68363b65 0,transparent 45%);z-index:-1}
+.greeting-badge{display:inline-flex;align-items:center;gap:8px;background:#ffffff0d;border:1px solid #d59c9855;color:#f6c8c2;padding:6px 16px;border-radius:50px;font-size:12px;margin-bottom:14px}
+.overline{color:#e8aaa4;letter-spacing:3px;font-size:10px;font-weight:700}
+.hero h1{font-family:'Amiri',serif;font-size:clamp(52px,7vw,96px);line-height:1.12;font-weight:400;margin:20px 0 16px}
+.hero h1 em{color:#eda8a4;font-style:normal}
+.hero p{color:#d5c4bf;line-height:2.1;max-width:430px;font-size:15px}
+.actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:34px}
+.primary{background:#e4a19e;border:0;border-radius:100px;padding:14px 26px;color:#301f27;font-weight:800;font-size:13px;transition:transform .2s,background .2s}
+.primary:hover{background:#f5bab5;transform:translateY(-2px)}
+.secondary{border:1px solid #897477;background:transparent;color:#eadad4;border-radius:100px;padding:13px 22px;font-size:13px;transition:background .2s}
+.secondary:hover{background:#ffffff0c}
+.names{font-size:12px;color:#d7bfba;margin-top:40px;display:flex;gap:10px;align-items:center}
+.names b{font-weight:600}
+.names .heart{color:#edaaa5}
+
+.art{position:relative;height:450px;display:grid;place-items:center}
+.orbit{width:min(100%,395px);aspect-ratio:1;border:1px solid #d5a09d45;border-radius:50%;position:relative;display:grid;place-items:center}
+.orbit:before,.orbit:after{content:'';position:absolute;border:1px solid #eab4a326;border-radius:50%;inset:19px}
+.orbit:after{inset:-18px;border-style:dashed;opacity:.5}
+.moon{width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 40% 35%,#e9b5a8,#b97477 48%,#824b57 75%,#50333d);box-shadow:0 0 95px #d8887c33,inset -20px -10px 45px #4a293f55;display:grid;place-items:center}
+.moon svg{width:64%;height:64%;filter:drop-shadow(0 8px 16px #5e283d40)}
+.star{position:absolute;color:#e2b7a7;font-size:22px}
+.s1{top:9%;right:19%}
+.s2{bottom:18%;left:11%;font-size:14px}
+.s3{top:29%;left:4%;font-size:12px}
+.s4{bottom:7%;right:26%;font-size:13px}
+.art-note{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);white-space:nowrap;font-family:'Amiri',serif;font-style:italic;color:#d9b3a9;font-size:16px}
+
+.divider{display:flex;justify-content:center;align-items:center;gap:17px;color:#dc9b98;font-size:12px}
+.divider:before,.divider:after{content:'';width:75px;height:1px;background:#76565b}
+
+.section{padding:90px 10%;text-align:center}
+.section h2{font-family:'Amiri',serif;font-size:clamp(36px,4.8vw,56px);line-height:1.3;font-weight:400;margin:12px 0}
+.lead{color:#cbbab6;font-size:14px;line-height:2;margin:0 auto;max-width:510px}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:44px auto 0;max-width:1040px}
+.card{min-height:240px;background:#30262f;border:1px solid #65505a;border-radius:8px;padding:30px 24px;text-align:right;position:relative;transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-5px);border-color:#cd9695}
+.card .no{position:absolute;left:24px;top:24px;color:#a58486;font-size:11px}
+.icon{width:43px;height:43px;border:1px solid #b98383;border-radius:50%;display:grid;place-items:center;color:#efaaa5;font-size:19px;margin-bottom:26px}
+.card h3{font-family:'Amiri',serif;font-size:24px;font-weight:400;margin:0 0 8px}
+.card p{font-size:12px;line-height:2;color:#c5b2ae;margin:0}
+
+.letter-section{background:#eadbd1;color:#4c3036;padding:95px 10%;position:relative;overflow:hidden}
+.letter-section:before{content:'♥';position:absolute;color:#d6b3ad55;font-size:330px;line-height:1;left:-40px;bottom:-90px;transform:rotate(-15deg)}
+.letter-layout{max-width:1000px;margin:auto;display:grid;grid-template-columns:.85fr 1.15fr;gap:9%;align-items:center}
+.letter-label{color:#a26168}
+.letter-intro h2{font-family:'Amiri',serif;font-size:52px;font-weight:400;line-height:1.25;margin:18px 0}
+.letter-intro p{line-height:2;color:#815e60;font-size:13px}
+.envelope{min-height:290px;background:#f8f0e8;border:1px solid #ddc8bf;box-shadow:0 20px 45px #5d33331a;padding:36px 38px;transform:rotate(-2deg);position:relative}
+.envelope:before{content:'✦';position:absolute;left:26px;top:22px;color:#c88b89}
+.envelope .to{font-size:12px;color:#a27376}
+.envelope .message{font-family:'Amiri',serif;font-size:23px;line-height:1.9;color:#593c3d;margin:20px 0}
+.signature{color:#a36d70;font-family:'Amiri',serif;font-size:20px}
+
+.play{background:#282029}
+.reason-box{max-width:730px;margin:34px auto 0;padding:34px;border:1px solid #77575e;background:linear-gradient(135deg,#3e2a36,#30242e);border-radius:10px}
+.reason{font-family:'Amiri',serif;font-size:clamp(24px,3.8vw,36px);min-height:60px;margin:0 0 22px;color:#f5d6cb;line-height:1.6}
+
+/* Capsule Section */
+.capsule-section{background:#231b26;position:relative;overflow:hidden}
+.capsule-wrap{max-width:780px;margin:38px auto 0;perspective:1000px}
+.wax-envelope{background:linear-gradient(145deg,#3b2935,#2c1f29);border:1px solid #8a6068;border-radius:14px;padding:42px 30px;position:relative;box-shadow:0 24px 60px #0f0a1266}
+.wax-seal{width:84px;height:84px;margin:0 auto 18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#c94a58,#8c2633 65%,#5e1520);border:3px solid #e0768055;box-shadow:0 10px 25px #6b162288,inset 0 2px 8px #ffb3ba66;display:grid;place-items:center;color:#ffe4e1;font-family:'Amiri',serif;font-size:26px;cursor:pointer;transition:transform .25s ease}
+.wax-seal:hover{transform:scale(1.08) rotate(-4deg)}
+.wax-label{font-family:'Amiri',serif;font-size:25px;color:#f5d5ce;margin:0 0 8px}
+.wax-sub{font-size:13px;color:#cbb6b3;margin:0 0 22px;line-height:1.9}
+.future-letter{display:none;background:#faf1e8;color:#4a2d33;border:1px solid #dfc5bc;border-radius:12px;padding:36px 32px;text-align:right;box-shadow:0 20px 50px #120b1455}
+.future-letter.opened{display:block}
+.future-letter-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px dashed #cfaaa4;padding-bottom:12px;margin-bottom:18px;font-size:12px;color:#9c6066;flex-wrap:wrap;gap:8px}
+.future-letter-body{font-family:'Amiri',serif;font-size:22px;line-height:2;color:#543439}
+.future-letter-body p{margin:0 0 15px}
+.future-letter-footer{margin-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+/* Mood Section */
+.mood-section{background:#eadbd1;color:#4c3036}
+.mood-section .overline{color:#a26168}
+.mood-section .lead{color:#815e60}
+.mood-grid{max-width:960px;margin:36px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.mood-card-btn{background:#faf2eb;border:1.5px solid #d8beb6;border-radius:12px;padding:18px 14px;text-align:center;color:#4e2f35;transition:all .22s ease;display:flex;flex-direction:column;align-items:center;gap:8px}
+.mood-card-btn:hover{transform:translateY(-3px);border-color:#c27d82;background:#fff8f3}
+.mood-card-btn.active{background:#462c36;color:#f9ece6;border-color:#462c36;box-shadow:0 14px 30px #462c362e}
+.mood-emoji{font-size:26px;line-height:1}
+.mood-title{font-weight:700;font-size:13px}
+.mood-response-panel{max-width:960px;margin:22px auto 0;background:#fbf3ec;border:1px solid #d6b8b0;border-radius:14px;padding:30px;text-align:right;box-shadow:0 18px 45px #5d333312}
+.mood-reply-text{font-family:'Amiri',serif;font-size:24px;line-height:1.85;color:#4f3036;margin:0 0 16px}
+.mood-suggestion-box{background:#f2e2d9;border-right:3px solid #c97b80;padding:12px 16px;border-radius:8px;font-size:13px;color:#6b464b;margin-bottom:18px;line-height:1.8}
+.mood-treat-result{font-family:'Amiri',serif;font-size:20px;color:#a84c57;margin-top:12px;min-height:28px}
+
+/* Timeline Section */
+.timeline-section{background:#261e29;position:relative}
+.timeline-container{max-width:860px;margin:42px auto 0;position:relative;padding-right:32px;text-align:right}
+.timeline-container:before{content:'';position:absolute;right:10px;top:8px;bottom:8px;width:2px;background:linear-gradient(to bottom,#e4a19e,#76525a)}
+.timeline-item{position:relative;margin-bottom:24px;background:#322632;border:1px solid #6b4e57;border-radius:12px;padding:22px 24px;transition:transform .2s,border-color .2s}
+.timeline-item:hover{transform:translateX(-4px);border-color:#d89c9a}
+.timeline-dot{position:absolute;right:-29px;top:24px;width:15px;height:15px;border-radius:50%;background:#e4a19e;border:3px solid #261e29;box-shadow:0 0 0 3px #e4a19e44}
+.timeline-date{display:inline-block;font-size:11px;color:#f2b4af;background:#ffffff0a;padding:3px 12px;border-radius:50px;margin-bottom:8px}
+.timeline-item h3{font:400 25px 'Amiri',serif;margin:0 0 6px;color:#fff0ea}
+.timeline-item p{font-size:13px;line-height:1.9;color:#cbb8b5;margin:0}
+.add-milestone-box{max-width:860px;margin:28px auto 0;background:#2f232e;border:1px dashed #825d65;border-radius:12px;padding:22px;text-align:right}
+.add-milestone-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.add-milestone-grid input,.add-milestone-box textarea{width:100%;background:#fff8f3;border:0;border-radius:8px;padding:10px 14px;color:#4c3036;font:inherit;font-size:13px}
+.add-milestone-box textarea{grid-column:1/-1;min-height:70px;resize:vertical}
+
+/* Stars Section */
+.stars-section{background:radial-gradient(ellipse at 50% 25%,#3b273b 0,#1d1622 75%);position:relative;overflow:hidden}
+.sky-canvas{max-width:920px;height:320px;margin:36px auto 0;border:1px solid #755666;border-radius:16px;background:radial-gradient(circle at 20% 30%,#4e334a55 0,transparent 45%),radial-gradient(circle at 80% 70%,#61384544 0,transparent 50%),#19131e;position:relative;overflow:hidden;box-shadow:inset 0 0 60px #0b080e}
+.sky-star-btn{position:absolute;transform:translate(-50%,-50%);background:transparent;border:0;color:#f6d5c8;font-size:25px;padding:10px;cursor:pointer;transition:transform .25s ease,color .2s ease}
+.sky-star-btn:hover,.sky-star-btn.lit{color:#ffe599;transform:translate(-50%,-50%) scale(1.35);text-shadow:0 0 16px #ffd27d}
+.star-story-card{max-width:740px;margin:20px auto 0;background:#2f2230;border:1px solid #7d5b68;border-radius:12px;padding:22px 26px;min-height:105px;display:flex;flex-direction:column;justify-content:center}
+.star-story-title{font-size:12px;color:#f0aba6;font-weight:700;margin-bottom:6px}
+.star-story-text{font-family:'Amiri',serif;font-size:23px;color:#faece5;line-height:1.75;margin:0}
+
+/* Quiz Section */
+.quiz-section{background:#efe1d7;color:#4c3036}
+.quiz-section .overline{color:#a66269}
+.quiz-section .lead{color:#886b6c}
+.quiz-card{max-width:760px;margin:38px auto 0;background:#faf2eb;border:1px solid #d9bfb7;border-radius:14px;padding:32px 28px;text-align:right;box-shadow:0 20px 50px #5d333312}
+.quiz-progress{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:#9c656a;margin-bottom:12px}
+.quiz-bar{height:6px;background:#e8d3cb;border-radius:50px;overflow:hidden;margin-bottom:22px}
+.quiz-bar-fill{height:100%;background:#d87a80;width:16.6%;transition:width .3s ease}
+.quiz-q{font:400 27px/1.6 'Amiri',serif;color:#4a2c32;margin:0 0 18px}
+.quiz-options{display:grid;gap:10px}
+.quiz-opt{background:#fff9f5;border:1.5px solid #d6b8b0;border-radius:10px;padding:14px 18px;text-align:right;color:#523338;font-size:14px;transition:.2s}
+.quiz-opt:hover{border-color:#c4757b;background:#f7e8e2}
+.quiz-opt.selected{background:#482d37;color:#fff2ec;border-color:#482d37;font-weight:700}
+.quiz-certificate{text-align:center;padding:14px 6px}
+.cert-badge{display:inline-block;border:2px solid #c97b80;color:#a84d58;padding:6px 18px;border-radius:50px;font-size:12px;font-weight:800;margin-bottom:10px}
+.cert-score{font:400 42px 'Amiri',serif;color:#4a2c32;margin:6px 0}
+.cert-desc{font-size:14px;line-height:2;color:#735056;max-width:540px;margin:0 auto 20px}
+
+/* Countdown Section */
+.countdown-section{background:#231b26}
+.countdown-box{max-width:820px;margin:36px auto 0;background:linear-gradient(135deg,#382734,#2b1f29);border:1px solid #7c5962;border-radius:14px;padding:32px 26px;text-align:center}
+.event-badge{display:inline-block;background:#e4a19e22;border:1px solid #e4a19e66;color:#f5bdb6;padding:6px 18px;border-radius:50px;font-size:13px;margin-bottom:20px}
+.timer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:540px;margin:0 auto 24px}
+.timer-unit{background:#221821;border:1px solid #6b4c55;border-radius:10px;padding:14px 10px}
+.timer-num{font-family:'Amiri',serif;font-size:36px;color:#f7c5be;line-height:1.1;display:block}
+.timer-lbl{font-size:11px;color:#bfa8a6;margin-top:4px;display:block}
+.countdown-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:14px;padding-top:16px;border-top:1px solid #ffffff12}
+.countdown-form input{background:#fff8f3;border:0;border-radius:8px;padding:10px 14px;color:#4c3036;font-size:13px}
+
+/* Polaroid Photo Gallery */
+.polaroid-section{background:#eadbd1;color:#4c3036}
+.polaroid-section .overline{color:#a26168}
+.polaroid-section .lead{color:#815e60}
+.polaroid-grid{max-width:1040px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.polaroid-card{background:#fffaf6;border:1px solid #dfc6be;border-radius:4px;padding:16px 16px 24px;box-shadow:0 14px 35px #5d333314;text-align:right;transition:transform .25s ease;transform:rotate(-1deg)}
+.polaroid-card:nth-child(even){transform:rotate(1.5deg)}
+.polaroid-card:hover{transform:translateY(-5px) rotate(0deg)}
+.polaroid-img-wrap{width:100%;aspect-ratio:4/3;background:#f2e2da;border-radius:3px;overflow:hidden;position:relative;display:grid;place-items:center;color:#9e7278;font-size:32px;margin-bottom:14px}
+.polaroid-img-wrap img{width:100%;height:100%;object-fit:cover}
+.polaroid-caption{font-family:'Amiri',serif;font-size:22px;color:#54363b;margin:0 0 6px}
+.polaroid-date{font-size:11px;color:#a2767a}
+.add-polaroid-box{max-width:760px;margin:32px auto 0;background:#f5e5db;border:1px dashed #c99b95;border-radius:12px;padding:24px;text-align:right}
+.add-polaroid-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.add-polaroid-grid input{background:#fff;border:1px solid #d5b8b0;border-radius:8px;padding:10px 14px;color:#4c3036;font:inherit;font-size:13px}
+
+/* High School Support Jar */
+.support-section{background:#30262f;color:#f8eee8}
+.support-section .overline{color:#e8aaa4}
+.support-box{max-width:740px;margin:38px auto 0;border:1px solid #755560;background:linear-gradient(135deg,#3d2a37,#2c1f2a);border-radius:12px;padding:36px;text-align:center;box-shadow:0 20px 50px #130c1455}
+.support-display{font-family:'Amiri',serif;font-size:clamp(24px,3.6vw,34px);line-height:1.75;color:#fce4dc;min-height:90px;margin:0 0 26px;display:grid;place-items:center}
+
+/* Mini Game Section */
+.game-catch-section{background:#231b26;color:#f8eee8}
+.catch-canvas-wrap{max-width:740px;margin:36px auto 0;position:relative;background:#1a131b;border:1px solid #704f5b;border-radius:14px;overflow:hidden;box-shadow:0 20px 50px #0b070d66}
+.catch-hud{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;background:#2d212c;border-bottom:1px solid #5a3f4a;font-size:13px;color:#f3c4be}
+#catchCanvas{display:block;width:100%;height:340px;background:#1a131b;cursor:crosshair}
+.catch-controls{padding:16px;background:#251c24;display:flex;justify-content:center;gap:12px;align-items:center}
+
+/* Together Section Styles */
+.together{background:#efe1d7;color:#4c3036}
+.together .overline{color:#a66269}
+.together .lead{color:#886b6c}
+.together-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:1000px;margin:42px auto 0}
+.together-card{background:#faf1e9;border:1px solid #dcc5bb;border-radius:10px;padding:30px;min-height:260px;text-align:right;display:flex;flex-direction:column;align-items:flex-start}
+.together-card .mini{font-size:11px;color:#b47679;letter-spacing:1px}
+.together-card h3{font:400 30px 'Amiri',serif;margin:8px 0;color:#55383c}
+.together-card p{font:400 20px/1.8 'Amiri',serif;color:#735056;min-height:70px;margin:6px 0 18px}
+.together-card button{margin-top:auto}
+.together-card .secondary{color:#70494e;border-color:#c9a4a1}
+
+/* Games Section */
+.game-wrap{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.game-card{border:1px solid #76555d;background:#302630;border-radius:10px;padding:26px;text-align:center}
+.game-card h3{font:400 28px 'Amiri',serif;margin:0 0 5px}
+.game-card p{font-size:12px;line-height:1.9;color:#c7b5b3}
+.game-status{min-height:28px;color:#f4bdb5!important;font-weight:700}
+.game-actions{display:flex;justify-content:center;gap:10px;margin-top:18px}
+.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:300px;margin:16px auto}
+.memory-tile{border:1px solid #9a7177;background:#4a3440;color:#f3bcb2;border-radius:8px;aspect-ratio:1;font-size:24px;transition:background .2s}
+.memory-tile.open,.memory-tile.matched{background:#e8bab0;color:#673e48}
+.memory-tile.matched{opacity:.65}
+.xo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:230px;margin:16px auto}
+.xo-cell{border:1px solid #9a7177;background:#4a3440;color:#f2b4af;border-radius:8px;aspect-ratio:1;font:400 34px 'Amiri',serif}
+.memory-tile:disabled,.xo-cell:disabled{cursor:default}
+.game-heading .overline{color:#e8aaa4}
+
+/* Music Section Styles */
+.music-section{background:#e9d9cf;color:#503339}
+.music-section .overline{color:#a25f68}
+.music-section .lead{color:#876568}
+.music-panel{display:grid;grid-template-columns:140px 1fr;gap:32px;align-items:center;text-align:right;max-width:840px;margin:38px auto 0;padding:30px;background:#fbf1ea;border:1px solid #dbc0ba;border-radius:12px;box-shadow:0 22px 60px #572c3114}
+.record{width:135px;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#3b2731 0 4px,#4b333d 5px 6px);display:grid;place-items:center;box-shadow:0 10px 20px #57323a3b}
+.record span{display:grid;place-items:center;border-radius:50%;width:46px;height:46px;color:#6a3845;background:#e5a39b;font-size:19px}
+.record.is-playing{animation:spinning 8s linear infinite}
+@keyframes spinning{to{transform:rotate(360deg)}}
+.music-info h3{font:400 27px 'Amiri',serif;margin:0 0 4px}
+.music-info p{font-size:12px;color:#8d6d6c;margin:0 0 12px}
+.music-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.music-buttons .secondary{border-color:#c5a19c;color:#795157;padding:10px 16px}
+.audio-error{font-size:12px!important;min-height:1.5em;color:#aa5360!important;margin-top:8px!important}
+.music-tip{font-size:11px;color:#967878;line-height:1.8;margin-top:9px}
+.track-form{display:flex;gap:8px;margin-top:12px}
+.track-form input{min-width:0;flex:1;border:1px solid #d4b7ae;border-radius:7px;padding:9px 12px;background:#fffaf7;color:#4b3034;direction:ltr}
+.track-form button{border:1px solid #c9a7a0;background:transparent;color:#70494e;border-radius:7px;padding:8px 14px}
+.yt-player-box{margin-top:12px;background:#2a1f26;border-radius:8px;overflow:hidden;border:1px solid #c49d97;display:none}
+.yt-player-box.active{display:block}
+.yt-player-box iframe{width:100%;height:180px;border:0;display:block}
+.music-shortcut{position:fixed;bottom:18px;left:18px;z-index:10;background:#f3d0c8;color:#57343c;border:1px solid #d8aaa5;border-radius:50px;padding:10px 16px;font-size:12px;text-decoration:none;box-shadow:0 5px 18px #180f1c4d}
+.music-shortcut:hover{background:#ffe2d7}
+
+/* Love Space & Jar Styles */
+.love-space{background:radial-gradient(circle at 50% 10%,#69414d 0,#2b222c 55%);position:relative;overflow:hidden}
+.love-constellation{font-size:18px;color:#e9a49e;letter-spacing:12px;margin:14px}
+.love-note{max-width:760px;margin:32px auto 0;border:1px solid #936e74;background:#3d2a35;border-radius:10px;padding:32px;position:relative}
+.love-note:before{content:'“';position:absolute;right:26px;top:-18px;font:100px 'Amiri',serif;color:#e0a7a059}
+.love-note p{font:400 clamp(24px,3.4vw,34px)/1.8 'Amiri',serif;margin:0;color:#f8e7dc}
+.open-when{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:26px auto 0}
+.open-when button{border:1px solid #aa8082;color:#f8d8cf;background:#ffffff08;padding:10px 16px;border-radius:50px}
+.open-when button.active{background:#e9b0a8;color:#4c2d36}
+.love-counter{max-width:760px;margin:22px auto 0;padding:26px;border:1px solid #765b63;border-radius:10px;background:#ffffff08}
+.love-counter h3{font:400 28px 'Amiri',serif;margin:0 0 7px}
+.love-counter p{color:#d1bcb9;font-size:12px;line-height:2}
+.counter-inputs{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.counter-inputs input{background:#fff7f1;border:0;color:#55383e;border-radius:7px;padding:10px 14px;min-width:180px}
+.counter-output{font-family:'Amiri',serif;font-size:23px!important;color:#f1bbb4!important;min-height:35px;margin:14px 0 0}
+.heart-layer{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+.heart-float{position:absolute;bottom:-35px;color:#edaba9;animation:floatUp 3s ease-out forwards}
+@keyframes floatUp{from{transform:translateY(0) rotate(0deg);opacity:0}15%{opacity:.9}to{transform:translateY(-100vh) rotate(35deg);opacity:0}}
+
+/* Footer & Modal */
+.footer{padding:30px 8%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#a99390;font-size:11px;flex-wrap:wrap;gap:12px;text-align:center}
+.footer b{font-family:'Amiri',serif;font-size:18px;color:#e9c1b9;font-weight:400}
+.modal{border:0;border-radius:12px;background:#f9eee8;color:#4c3036;padding:30px;width:min(90vw,420px);box-shadow:0 20px 70px #100b10aa}
+.modal::backdrop{background:#130e16bb;backdrop-filter:blur(5px)}
+.modal h2{font-family:'Amiri',serif;font-size:32px;margin:0 0 5px}
+.modal p{font-size:12px;color:#805f61;line-height:1.9}
+.modal label{display:block;font-size:12px;font-weight:700;margin:14px 0 5px}
+.modal input{width:100%;border:1px solid #d7b9b4;border-radius:7px;padding:10px;background:#fffaf6;color:#50353a}
+.modal-actions{display:flex;gap:10px;margin-top:22px}
+.modal .secondary{color:#603d42;border-color:#c9a4a1}
+.notice{font-size:11px;color:#966d6c}
+
+/* Coupons & Wishlist Styles */
+.coupons-section{background:#f4e6dc;color:#4c3036}
+.coupons-section .overline{color:#a25f68}
+.coupons-grid{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.coupon-ticket{background:#faf2eb;border:1.5px dashed #c99f98;border-radius:12px;padding:26px;text-align:right;position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:190px}
+.coupon-ticket.redeemed{background:#eee0d6;opacity:.75;border-style:solid}
+.coupon-tag{font-size:11px;color:#a26168;letter-spacing:1px}
+.coupon-ticket h3{font:400 26px 'Amiri',serif;margin:6px 0;color:#55343a}
+.coupon-ticket p{font-size:13px;color:#7e5b60;margin:0 0 16px}
+.wishlist-section{background:#352934;color:#f8eee8}
+.wishlist-box{max-width:760px;margin:38px auto 0;background:#2d212c;border:1px solid #73515d;border-radius:12px;padding:32px;text-align:right}
+.wishlist-input-form{display:flex;gap:10px;margin-bottom:20px}
+.wishlist-input-form input{flex:1;background:#fff8f3;border:0;border-radius:8px;padding:10px 14px;color:#4c3036;font:inherit;font-size:13px}
+.wish-items{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.wish-item{background:#382a36;border:1px solid #6b4d58;border-radius:8px;padding:12px 16px;display:flex;align-items:center;gap:12px;cursor:pointer;transition:.2s}
+.wish-item:hover{border-color:#d89c9a}
+.wish-item.done{opacity:.6;background:#281e27}
+.wish-check{width:20px;height:20px;border:1.5px solid #d59c98;border-radius:50%;display:grid;place-items:center;color:transparent;font-size:11px}
+.wish-item.done .wish-check{background:#d59c98;color:#281e27}
+.wish-text{font-size:14px;color:#f3e4dc}
+
+@media(max-width:750px){
+  .nav{height:72px;padding:0 5%}
+  .navlinks a{display:none}
+  .hero{display:flex;flex-direction:column-reverse;text-align:center;padding:35px 7% 70px;gap:10px}
+  .hero h1{font-size:52px}
+  .hero p{margin:auto}
+  .actions,.names{justify-content:center}
+  .art{height:320px;width:100%}
+  .orbit{width:260px}
+  .art-note{bottom:0}
+  .section{padding:70px 7%}
+  .cards,.together-grid,.game-wrap,.mood-grid,.coupons-grid,.polaroid-grid{grid-template-columns:1fr;gap:14px}
+  .card,.together-card,.game-card{min-height:0;padding:24px}
+  .icon{margin-bottom:16px}
+  .letter-section{padding:75px 7%}
+  .letter-layout{grid-template-columns:1fr;gap:28px}
+  .letter-intro{text-align:center}
+  .letter-intro h2{font-size:42px}
+  .envelope{padding:28px;transform:rotate(-1deg)}
+  .music-panel{grid-template-columns:1fr;justify-items:center;padding:22px}
+  .music-info{width:100%}
+  .record{width:95px}
+  .record span{width:34px;height:34px}
+  .music-shortcut{bottom:10px;left:10px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="nav">
+    <div class="brand">حكايتنا <span>♥</span></div>
+    <nav class="navlinks" aria-label="التنقل">
+      <a href="#letter">رسالة لروزتي</a>
+      <a href="#capsule">كبسولة الزمن</a>
+      <a href="#mood">مزاجك</a>
+      <a href="#timeline">محطاتنا</a>
+      <a href="#stars">نجومنا</a>
+      <a href="#quiz">اختبارنا</a>
+      <a href="#polaroid">صورنا</a>
+      <a href="#supportJar">في ضهرك</a>
+      <a href="#games">ألعاب</a>
+      <a href="#music">أغنيتنا</a>
+      <button class="pill" id="customize">تعديل الأسماء ✎</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="greeting-badge" id="liveGreeting">✦ أهلاً بيكي يا روزتي في ركننا الدافي</div>
+        <div class="overline">حكاية حلوة .. ليها قلبين</div>
+        <h1>إنتِ أحلى<br><em>حكاية في عمري، يا روزتي.</em></h1>
+        <p>وسط كل الزحمة والتفاصيل، وجودك يا أروى هو المكان اللي قلبي بيرتاح فيه. عملتلك الركن الصغير ده عشان يفضل يفكرك إنك أغلى حاجة في حياتي.</p>
+        <div class="actions">
+          <a href="#letter" class="primary" style="text-decoration:none">افتحي رسالتي &nbsp; ←</a>
+          <a href="#capsule" class="secondary" style="text-decoration:none">كبسولة المستقبل ✉</a>
+        </div>
+        <div class="names">
+          <b class="name1">أحمد حسام</b>
+          <span class="heart">♥</span>
+          <b class="name2">أروى</b>
+          <span>— حكاية لسه بتتحكي</span>
+        </div>
+      </div>
+      <div class="art" aria-hidden="true">
+        <div class="orbit">
+          <div class="moon">
+            <svg viewBox="0 0 200 200" fill="none">
+              <path d="M100 166C92 158 40 129 40 91c0-30 35-43 60-13 25-30 60-17 60 13 0 38-52 67-60 75Z" fill="#F9E6DC" fill-opacity=".89"/>
+              <path d="M100 142C93 136 61 115 61 92c0-18 22-26 39-7 17-19 39-11 39 7 0 23-32 44-39 50Z" stroke="#C78483" stroke-width="1.5" opacity=".7"/>
+            </svg>
+          </div>
+          <span class="star s1">✦</span>
+          <span class="star s2">✧</span>
+          <span class="star s3">✦</span>
+          <span class="star s4">✧</span>
+        </div>
+        <div class="art-note">لكِ من القلب، بكل الحب</div>
+      </div>
+    </section>
+
+    <div class="divider">✦</div>
+
+    <section class="section" id="moments">
+      <div class="overline">تفاصيل صغيرة .. حب كبير</div>
+      <h2>الحلو بيحلى معاكي</h2>
+      <p class="lead">مش لازم مناسبة عشان أقولك قد إيه وجودك فارق. دي شوية حاجات بحبها في حكايتنا.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="no">01 /</span>
+          <div class="icon">♡</div>
+          <h3>ضحكتك</h3>
+          <p>اللي بتخلّي اليوم العادي أحلى، وبتفكرني إن أبسط الحاجات ممكن تفرّح القلب وتنوّر الدنيا.</p>
+        </article>
+        <article class="card">
+          <span class="no">02 /</span>
+          <div class="icon">✧</div>
+          <h3>كلامنا</h3>
+          <p>من الحكايات الكبيرة للكلام اللي ملوش سبب، كل لحظة معاكي ليها طعم تاني ومفيش ملل.</p>
+        </article>
+        <article class="card">
+          <span class="no">03 /</span>
+          <div class="icon">☾</div>
+          <h3>وجودك</h3>
+          <p>عشان وسط أي يوم طويل، فكرة إنك موجودة بتخلّي كل حاجة أهدى وألطف بكتير.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="letter-section" id="letter">
+      <div class="letter-layout">
+        <div class="letter-intro">
+          <div class="overline letter-label">من قلبي لقلبك</div>
+          <h2>كلام قليل،<br>وحب كتير.</h2>
+          <p>في حاجات بنحسّها أكتر ما بنعرف نوصفها. بس دي محاولة صغيرة عشان أوصّلك اللي في قلبي يا روزتي.</p>
+        </div>
+        <div class="envelope">
+          <div class="to">إلى <span class="name2">أروى</span>، بكل حب ♡</div>
+          <div class="message">أنا ممتن لكل لحظة فيها إنتِ. لضحكتك، لحنانك، وللطريقة اللي بتخلّي بيها الدنيا أخف وأجمل. أتمنى نفضل دايمًا نلاقي في بعض راحة، ونحكي حكايات أحلى يوم ورا يوم.</div>
+          <div class="signature">بحبك، <span class="name1">أحمد حسام</span> ♥</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. كبسولة الزمن — رسالة من المستقبل -->
+    <section class="section capsule-section" id="capsule">
+      <div class="overline">مكتوبة النهارده.. ليوم فرحتنا الكبيرة</div>
+      <h2>كبسولة الزمن — رسالة من المستقبل ✉</h2>
+      <p class="lead">ظرف مختوم بالشمع الدافئ، مستني اللحظة اللي نقفل فيها صفحة الامتحانات ونحتفل بوصولنا لحلمنا.</p>
+      <div class="capsule-wrap">
+        <div class="wax-envelope" id="waxEnvelope">
+          <button type="button" class="wax-seal" id="breakSealBtn" aria-label="كسر الختم وفتح رسالة المستقبل">♥</button>
+          <h3 class="wax-label">يُفتح بعد التخرج والامتحانات.. يوم ما نوصل لحلمنا</h3>
+          <p class="wax-sub">دوسي على الختم الأحمر عشان تفتحي الرسالة اللي سابهالك أحمد لليوم ده.</p>
+          <button type="button" class="primary" id="openSealTextBtn">اكسر الختم واقري الرسالة ✦</button>
+        </div>
+
+        <article class="future-letter" id="futureLetter" aria-live="polite">
+          <div class="future-letter-header">
+            <span>✦ من أرشيف حكايتنا — إلى دكتورتي الغالية أروى</span>
+            <span>يوم التخرج والنجاح 🎓</span>
+          </div>
+          <div class="future-letter-body">
+            <p>مبروك يا روزتي.. أخيرًا اليوم اللي استنيناه وتعبنا عشانه جه!</p>
+            <p>فاكرة أيام تالتة ثانوي، والسهر، والقلق، واللحظات اللي كنتي بتحسي فيها إن الطريق طويل؟ أنا كنت شايف قد إيه إنتِ قوية ومجتهدة، وكنت واثق في كل لحظة إن ربنا مش هيضيع تعبك أبدًا، وإن حلم الطب وحلمنا الكبير مستنيكي.</p>
+            <p>النهارده وإحنا بنحتفل بنجاحنا سوا، عايز أقولك إني فخور بيكي فخر مالوش حدود.. فخور بكل خطوة مشيناها، وبإنك كنتي السند والضحكة الحلوة في أصعب الأوقات. ده مش مجرد نجاح في امتحانات، دي بداية أجمل فصل في حياتنا سوا.</p>
+          </div>
+          <div class="future-letter-footer">
+            <span class="signature">دايمًا فخور بيكي وبحبك، <span class="name1">أحمد حسام</span> ♥</span>
+            <button type="button" class="secondary" style="color:#6d474c;border-color:#c59f9b;padding:8px 16px;font-size:12px" id="resealBtn">إعادة ختم الظرف ↺</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 2. مقياس الحب ومزاج روزتي النهارده -->
+    <section class="section mood-section" id="mood">
+      <div class="overline">قلبي حاسس بيكي دايمًا</div>
+      <h2>مقياس الحب ومزاج روزتي النهارده 🌸</h2>
+      <p class="lead">اختاري إحساسك دلوقتي مهما كان، وهتلاقي كلامي واقتراح مخصوص يظبط مودك.</p>
+      <div class="mood-grid" id="moodGrid">
+        <button type="button" class="mood-card-btn active" data-mood-key="happy">
+          <span class="mood-emoji">☀️</span>
+          <span class="mood-title">مبسوطة وطايرة من الفرح</span>
+        </button>
+        <button type="button" class="mood-card-btn" data-mood-key="stressed">
+          <span class="mood-emoji">📚</span>
+          <span class="mood-title">مضغوطة من المذاكرة</span>
+        </button>
+        <button type="button" class="mood-card-btn" data-mood-key="tender">
+          <span class="mood-emoji">🤍</span>
+          <span class="mood-title">محتاجة حنية وتطمين</span>
+        </button>
+        <button type="button" class="mood-card-btn" data-mood-key="miss">
+          <span class="mood-emoji">💌</span>
+          <span class="mood-title">وحشتني أوي</span>
+        </button>
+        <button type="button" class="mood-card-btn" data-mood-key="laugh">
+          <span class="mood-emoji">✨</span>
+          <span class="mood-title">عايزة أضحك وأفرفش</span>
+        </button>
+        <button type="button" class="mood-card-btn" data-mood-key="calm">
+          <span class="mood-emoji">🌙</span>
+          <span class="mood-title">هادية ورايقة</span>
+        </button>
+      </div>
+
+      <div class="mood-response-panel" id="moodResponsePanel">
+        <p class="mood-reply-text" id="moodReplyText" aria-live="polite">يا رب دايمًا مبسوطة وضحكتك مالية الدنيا يا روزتي! فرحتك بتفرح قلبي أضعاف، وبحب أشوف عيونك بتلمع من السعادة.</p>
+        <div class="mood-suggestion-box" id="moodSuggestion">
+          <strong>اقتراح أحمد لمودك دلوقتي:</strong> شغّلي أكتر أغنية بتحبيها في قسم "أغنيتنا" تحت، واحتفظي باللحظة الحلوة دي في قلبك ♫
+        </div>
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+          <button type="button" class="primary" id="moodTreatBtn">خدي جرعة دلع خاصة بالمزاج ده ♥</button>
+          <a href="#music" class="secondary" style="color:#6d474c;border-color:#c59f9b;text-decoration:none;padding:12px 20px">روحي لقسم الأغاني ♫</a>
+        </div>
+        <div class="mood-treat-result" id="moodTreatResult" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- 3. شريط محطات حكايتنا -->
+    <section class="section timeline-section" id="timeline">
+      <div class="overline">كل خطوة ليها ذكرى في قلبي</div>
+      <h2>شريط محطات حكايتنا 🕰️</h2>
+      <p class="lead">من أول ما اتقابلنا وزمالة الدراسة، لحد النهارده وكل يوم جاي لينا سوا.</p>
+      <div class="timeline-container" id="timelineList">
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">البداية الحلوة • أيام الإعدادي</span>
+          <h3>أول معرفة وزمالة الدراسة</h3>
+          <p>الأيام اللي بدأت فيها الحكاية ببساطة وعفوية، من غير ما نعرف إن الصدفة دي هتبقى أجمل حاجة في حياتنا.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">نقطة التحول • قرب القلوب</span>
+          <h3>لما الكلام بقى ليه طعم تاني</h3>
+          <p>أول مرة نحس إننا فاهمين بعض من غير مجهود، وإن الكلام معاكي بيخلي اليوم كله يفرق ويحلو.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">ذكريات ما تتنسيش • الضحك والسهر</span>
+          <h3>مواقفنا الصغيرة وحكاياتنا</h3>
+          <p>كل ضحكة من القلب، وكل مرة كنا بنهون على بعض زحمة اليوم بكلمة حلوة أو اهتمام بسيط.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="timeline-date">النهارده • سنة تالتة ثانوي</span>
+          <h3>إيد بإيد لحد ما نوصل لحلمنا</h3>
+          <p>بنشجع بعض وبنسند بعض في أهم سنة، ومستنيين اللحظة اللي نحتفل فيها بنجاحك يا أحلى دكتورة.</p>
+        </article>
+      </div>
+
+      <div class="add-milestone-box">
+        <strong style="font-family:'Amiri',serif;font-size:22px;color:#f5d5ce">✦ ضيفي ذكرى أو محطة جديدة لحكايتنا</strong>
+        <form id="milestoneForm" class="add-milestone-grid">
+          <input type="text" id="msTitle" maxlength="60" placeholder="عنوان المحطة (مثلاً: أحلى خروجة لينا)" required>
+          <input type="text" id="msDate" maxlength="40" placeholder="التوقيت أو المناسبة (مثلاً: شتاء ٢٠٢٦)" required>
+          <textarea id="msDesc" maxlength="220" placeholder="اكتبي تفاصيل الذكرى الحلوة دي..." required></textarea>
+          <div style="grid-column:1/-1;text-align:left">
+            <button type="submit" class="primary">حفظ المحطة في حكايتنا ♥</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. نجوم السماء التفاعلية -->
+    <section class="section stars-section" id="stars">
+      <div class="overline">سماء صافية مليانة تفاصيلك</div>
+      <h2>نجوم السماء — كل نجمة ليها حكاية ✨</h2>
+      <p class="lead">دوسي على أي نجمة بتلمع في السما عشان تنوّر وتقولك حاجة بحبها فيكي يا أروى.</p>
+      <div class="sky-canvas" id="skyCanvas" aria-label="سماء النجوم التفاعلية"></div>
+      <div class="star-story-card">
+        <div class="star-story-title" id="starTitle">✦ اختاري نجمة من السما</div>
+        <p class="star-story-text" id="starText" aria-live="polite">كل نجمة هنا شايلة صفة حلوة أو ذكرى جميلة بين أحمد وروزتي..</p>
+      </div>
+    </section>
+
+    <!-- 5. اختبار التوافق: قد إيه عارفين بعض؟ -->
+    <section class="section quiz-section" id="quiz">
+      <div class="overline">لعبة لطيفة بين أحمد وروزتي</div>
+      <h2>اختبار التوافق: قد إيه عارفين بعض؟ 💞</h2>
+      <p class="lead">٦ أسئلة خفيفة عن تفاصيلنا وتفضيلاتنا.. جاوبي وشوفي شهادة الحب والتوافق في الآخر!</p>
+      <div class="quiz-card" id="quizCard">
+        <div id="quizPlayArea">
+          <div class="quiz-progress">
+            <span id="quizStepText">السؤال ١ من ٦</span>
+            <span>♥ أحمد & أروى</span>
+          </div>
+          <div class="quiz-bar"><div class="quiz-bar-fill" id="quizBarFill"></div></div>
+          <h3 class="quiz-q" id="quizQuestion"></h3>
+          <div class="quiz-options" id="quizOptions"></div>
+        </div>
+        <div class="quiz-certificate" id="quizResultArea" style="display:none">
+          <span class="cert-badge">✦ شهادة حب وتوافق رسمية ✦</span>
+          <div class="cert-score" id="certScoreTitle">نسبة التوافق: ١٠٠٪ ♥</div>
+          <p class="cert-desc" id="certDesc"></p>
+          <button type="button" class="primary" id="restartQuizBtn">عيدي الاختبار من جديد ↻</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. عداد التنازلي لأجمل يوم جاي -->
+    <section class="section countdown-section" id="countdown">
+      <div class="overline">كل ثانية بتقربنا لفرحتنا</div>
+      <h2>العداد التنازلي لأجمل يوم جاي ⏳</h2>
+      <p class="lead">مستنيين اللحظة الحلوة الجاية بفارغ الصبر.. تقدري تعدّلي اسم المناسبة أو ميعادها في أي وقت.</p>
+      <div class="countdown-box">
+        <div class="event-badge" id="cdEventTitle">🎓 الاحتفال بنهاية الامتحانات وبداية أجمل إجازة</div>
+        <div class="timer-grid" aria-live="off">
+          <div class="timer-unit"><span class="timer-num" id="cdDays">٠٠</span><span class="timer-lbl">يوم</span></div>
+          <div class="timer-unit"><span class="timer-num" id="cdHours">٠٠</span><span class="timer-lbl">ساعة</span></div>
+          <div class="timer-unit"><span class="timer-num" id="cdMins">٠٠</span><span class="timer-lbl">دقيقة</span></div>
+          <div class="timer-unit"><span class="timer-num" id="cdSecs">٠٠</span><span class="timer-lbl">ثانية</span></div>
+        </div>
+        <p id="cdStatusMsg" style="font-size:13px;color:#e6b8b2;margin:0 0 10px"></p>
+        <form class="countdown-form" id="cdForm">
+          <input type="text" id="cdNameInput" maxlength="60" placeholder="اسم المناسبة (مثلاً: خروجة العيد)" aria-label="اسم المناسبة">
+          <input type="datetime-local" id="cdDateInput" aria-label="تاريخ ووقت المناسبة">
+          <button type="submit" class="primary" style="padding:10px 20px">ظبط العداد ✦</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 7. دفتر صورنا المصور (Polaroid) -->
+    <section class="section polaroid-section" id="polaroid">
+      <div class="overline">لحظاتنا الغالية في ألبوم واحد</div>
+      <h2>دفتر ذكرياتنا المصور 📸</h2>
+      <p class="lead">صور وذكريات لطيفة بتجمعنا، ومعرض مفتوح تقدري تضيفي ليه أي صورة أو ذكرى جديدة.</p>
+      <div class="polaroid-grid" id="polaroidGrid">
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img src="https://placehold.co/400x300/e6c5bc/543439?text=Our+Smile" alt="ذكرى حلوة" onerror="this.style.display='none'">
+            <span>♥</span>
+          </div>
+          <h3 class="polaroid-caption">يوم الضحكة الصافية</h3>
+          <span class="polaroid-date">ذكرى غالية في القلب</span>
+        </article>
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img src="https://placehold.co/400x300/d5b5ab/482f34?text=Sweet+Talk" alt="كلام حلو" onerror="this.style.display='none'">
+            <span>✦</span>
+          </div>
+          <h3 class="polaroid-caption">سهرة الكلام الحلو</h3>
+          <span class="polaroid-date">أحلى ساعات بنقضيها سوا</span>
+        </article>
+        <article class="polaroid-card">
+          <div class="polaroid-img-wrap">
+            <img src="https://placehold.co/400x300/e0cfc5/50333b?text=Medical+Dream" alt="حلمنا الكبير" onerror="this.style.display='none'">
+            <span>🎓</span>
+          </div>
+          <h3 class="polaroid-caption">في طريقي لحلمنا</h3>
+          <span class="polaroid-date">أجمل دكتورة في الدنيا</span>
+        </article>
+      </div>
+
+      <div class="add-polaroid-box">
+        <strong style="font-family:'Amiri',serif;font-size:22px;color:#6b3f46">✦ أضيفي ذكرى مصورة جديدة</strong>
+        <form id="polaroidForm" class="add-polaroid-grid">
+          <input type="text" id="pTitle" maxlength="40" placeholder="عنوان الصورة (مثلاً: أحلى يوم)" required>
+          <input type="url" id="pUrl" placeholder="رابط صورة مباشر (اختياري)" aria-label="رابط الصورة">
+          <div style="grid-column:1/-1;text-align:left">
+            <button type="submit" class="primary">أضف للألبوم ♥</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 8. ركن "أنا دايماً في ضهرك" (تالتة ثانوي) -->
+    <section class="section support-section" id="supportJar">
+      <div class="overline">لكل لحظة تعب أو مذاكرة</div>
+      <h2>ركن "أنا دايماً في ضهرك" 🤍</h2>
+      <p class="lead">زُرة طاقة ودعم مخصوص لفترة تالتة ثانوي والامتحانات، كل ضغطة بتطلع دعاء وكلام يريح قلبك.</p>
+      <div class="support-box">
+        <div class="support-display" id="supportDisplay" aria-live="polite">
+          "يا رب يوفقك ويفتحها عليكِ يا أروى، وتعدي كل امتحان وأنتِ منورة ومحققة أعلى الدرجات."
+        </div>
+        <button type="button" class="primary" id="nextSupportBtn">اسحبي رسالة دعم جديدة ✦</button>
+      </div>
+    </section>
+
+    <!-- 9. لعبة جمع القلوب السريعة -->
+    <section class="section game-catch-section" id="catchGame">
+      <div class="overline">لعبة خفيفة لكسر ملل المذاكرة</div>
+      <h2>تحدي القلوب السريعة ♡</h2>
+      <p class="lead">حركي الطبق يمين ويسار واجمعي أكبر عدد من القلوب والنجوم قبل ما تنزل!</p>
+      <div class="catch-canvas-wrap">
+        <div class="catch-hud">
+          <span id="catchScore">النتيجة: ٠</span>
+          <span id="catchBest">أعلى نتيجة: ٠</span>
+        </div>
+        <canvas id="catchCanvas" width="740" height="340" aria-label="لعبة جمع القلوب"></canvas>
+        <div class="catch-controls">
+          <button type="button" class="secondary" id="leftBtn" style="color:#f5c4be;border-color:#a87d86">◀ يمين</button>
+          <button type="button" class="primary" id="startCatchBtn">ابدئي اللعبة 🎮</button>
+          <button type="button" class="secondary" id="rightBtn" style="color:#f5c4be;border-color:#a87d86">يسار ▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- برطمان السعادة -->
+    <section class="section play" id="surprise">
+      <div class="overline">دوسي هنا كل ما تحبي</div>
+      <h2>رسالة صغيرة ليكي ✦</h2>
+      <p class="lead">كل ضغطة فيها كلمة حلوة، عشان تفتكري إنك مميزة عند أحمد.</p>
+      <div class="reason-box">
+        <p class="reason" id="reason" aria-live="polite">إنتِ النور اللي بيهوّن أي يوم طويل يا روزتي.</p>
+        <button class="primary" id="next">رسالة تانية ♡</button>
+      </div>
+    </section>
+
+    <!-- فعالياتنا (أفكار وأسئلة) -->
+    <section class="section together" id="together">
+      <div class="overline">وقت حلو على مزاجكم</div>
+      <h2>يلا نعمل حاجة سوا</h2>
+      <p class="lead">أفكار صغيرة وأسئلة تفتح بينكم حكايات جديدة. اختاروا واحدة وخدوا وقتكم.</p>
+      <div class="together-grid">
+        <article class="together-card">
+          <span class="mini">✦ فِسحة من الروتين</span>
+          <h3>نعمل إيه النهارده؟</h3>
+          <p id="dateIdea" aria-live="polite">اختاروا فيلم بتحبوه، وحضّروا سناكس واتفرجوا سوا.</p>
+          <button class="secondary" id="nextDate">هات فكرة تانية ↻</button>
+        </article>
+        <article class="together-card">
+          <span class="mini">♡ دور كل واحد فيكم</span>
+          <h3>سؤال يقرّبنا</h3>
+          <p id="questionText" aria-live="polite">إيه لحظة بسيطة خلتك تبتسم النهارده؟</p>
+          <button class="secondary" id="nextQuestion">سؤال تاني ↻</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- ألعاب الذاكرة وإكس وأو -->
+    <section class="section play" id="games">
+      <div class="game-heading">
+        <div class="overline">شوية لعب وضحك</div>
+        <h2>يلا نلعب سوا ♡</h2>
+        <p class="lead">لعبتين خفاف على نفس الجهاز، ومفيش غير كسبانين لما الوقتيبقى حلو.</p>
+      </div>
+      <div class="game-wrap">
+        <article class="game-card">
+          <h3>لمّوا القلوب</h3>
+          <p>اقلبوا كارتين في كل مرة، وحاولوا تلاقوا كل شكلين زي بعض.</p>
+          <div class="game-status" id="memoryStatus" aria-live="polite">المحاولات: ٠ · الأزواج: ٠ من ٦</div>
+          <div class="memory-grid" id="memoryGrid" aria-label="لعبة الذاكرة"></div>
+          <div class="game-actions">
+            <button class="secondary" id="memoryReset">العبوا من جديد ↻</button>
+          </div>
+        </article>
+        <article class="game-card">
+          <h3>إكس وأو بالحب</h3>
+          <p>اتبادلوا الأدوار على نفس الجهاز. أول واحد يكمّل تلاتة يكسب!</p>
+          <div class="game-status" id="xoStatus" aria-live="polite">دور ♡</div>
+          <div class="xo-grid" id="xoGrid" aria-label="لعبة إكس وأو"></div>
+          <div class="game-actions">
+            <button class="secondary" id="xoReset">جولة جديدة ↻</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- كوبونات دلع -->
+    <section class="section coupons-section" id="coupons">
+      <div class="overline">كوبونات مخصصة لروزتي</div>
+      <h2>كوبونات الدلع والحب 🎟️</h2>
+      <p class="lead">تذاكر مجانية تقدري تطلبيها من أحمد في أي وقت وتعوضي بيها أي تعب.</p>
+      <div class="coupons-grid">
+        <article class="coupon-ticket">
+          <div>
+            <span class="coupon-tag">كوبون رقم 01</span>
+            <h3>سهرة فيلم على ذوقك</h3>
+            <p>لكِ الحق في اختيار الفيلم وتجهيز السناكس كاملة.</p>
+          </div>
+          <button type="button" class="secondary coupon-btn">استخدمي الكوبون ✦</button>
+        </article>
+        <article class="coupon-ticket">
+          <div>
+            <span class="coupon-tag">كوبون رقم 02</span>
+            <h3>مكالمة تفريغ طاقة وسماع</h3>
+            <p>أحمد قاعد يسمعك بدون مقاطعة وبكل اهتمام لحد ما ترتاحي.</p>
+          </div>
+          <button type="button" class="secondary coupon-btn">استخدمي الكوبون ✦</button>
+        </article>
+        <article class="coupon-ticket">
+          <div>
+            <span class="coupon-tag">كوبون رقم 03</span>
+            <h3>إعفاء من توتر المذاكرة</h3>
+            <p>بريك إجباري وقهوة مظبوطة وضحك بعيد عن أي مذكرات.</p>
+          </div>
+          <button type="button" class="secondary coupon-btn">استخدمي الكوبون ✦</button>
+        </article>
+        <article class="coupon-ticket">
+          <div>
+            <span class="coupon-tag">كوبون رقم 04</span>
+            <h3>أكلة حلوة أو تحلية فورية</h3>
+            <p>أحمد مسؤول عن تجهيز أو إحضار أكتر حاجة بتحبيها.</p>
+          </div>
+          <button type="button" class="secondary coupon-btn">استخدمي الكوبون ✦</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- قائمة أحلامنا الصغيرة -->
+    <section class="section wishlist-section" id="wishlistSec">
+      <div class="overline">طموحاتنا وأمانينا القادمة</div>
+      <h2>قائمة أحلامنا الصغيرة ✨</h2>
+      <p class="lead">كل أمنية بنحققها سوا بتتقلب لذكرى جميلة.. ضيفي أمنية جديدة أو علمي على اللي تم.</p>
+      <div class="wishlist-box">
+        <form class="wishlist-input-form" id="wishForm">
+          <input type="text" id="wishInput" maxlength="70" placeholder="اكتبي أمنية جديدة نفسكم تعملوها سوا..." required>
+          <button type="submit" class="primary" style="padding:10px 18px">أضف للقائمة ✦</button>
+        </form>
+        <ul class="wish-items" id="wishList">
+          <li class="wish-item" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="wish-check">✓</span>
+            <span class="wish-text">الاحتفال بيوم تخرج أروى ونجاحها الباهر 🎓</span>
+          </li>
+          <li class="wish-item" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="wish-check">✓</span>
+            <span class="wish-text">خروجة طويلة في مكان هادي بعد الامتحانات مباشرة ☕</span>
+          </li>
+          <li class="wish-item" tabindex="0" role="checkbox" aria-checked="false">
+            <span class="wish-check">✓</span>
+            <span class="wish-text">شرب القهوة مع بعض واحنا بنحكي عن السنين الجاية 🌿</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- أغنيتنا ومشغل يوتيوب والميديا -->
+    <section class="section music-section" id="music">
+      <div class="overline">المزيكا اللي بتحكي عنكم</div>
+      <h2>أغنيتنا، على مزاجنا ♫</h2>
+      <p class="lead">اختاروا أغنية من يوتيوب، أو ملف صوتي من جهازكم، وخلوها تكمل معاكم وإنتوا بتلفّوا في الموقع.</p>
+      <div class="music-panel">
+        <div class="record" id="record" aria-hidden="true">
+          <span>♥</span>
+        </div>
+        <div class="music-info">
+          <h3 id="trackName">اختاروا أغنيتكم</h3>
+          <p>رابط يوتيوب مباشر أو ملف صوتي من جهازك.</p>
+          <audio id="songPlayer" controls preload="metadata" aria-label="مشغل الأغنية" style="display:none"></audio>
+          <div class="yt-player-box" id="ytPlayerBox">
+            <div id="youtubeEmbedContainer"></div>
+          </div>
+          <div class="music-buttons" style="margin-top:12px">
+            <button class="primary" type="button" id="chooseSong">اختاروا ملف صوتي ♫</button>
+            <button class="secondary" type="button" id="clearSong">شيل الأغنية</button>
+            <input id="songFile" type="file" accept="audio/*,.mp3,.m4a,.wav,.ogg,.aac,.flac" hidden>
+          </div>
+          <form class="track-form" id="trackForm">
+            <input id="trackUrl" type="url" placeholder="https://www.youtube.com/watch?v=..." aria-label="رابط يوتيوب أو صوت مباشر">
+            <button type="submit">شغّل الرابط 🎧</button>
+          </form>
+          <p class="audio-error" id="audioError" role="status" aria-live="polite"></p>
+          <div class="music-tip">يدعم روابط يوتيوب العادية و Shorts وموسيقى يوتيوب، أو الروابط المباشرة لملفات الصوت.</div>
+        </div>
+      </div>
+    </section>
+    <a class="music-shortcut" href="#music">♫ أغنيتنا</a>
+
+    <!-- رسائل الحب المخصصة وعداد الأيام -->
+    <section class="section love-space" id="love">
+      <div class="overline">عشان كل إحساس له كلامه</div>
+      <h2>افتحيها لما تحتاجي ♡</h2>
+      <p class="lead">رسائل صغيرة لأي وقت، عشان تفتكري إن الحب أحيانًا بيستخبى في أبسط الكلام.</p>
+      <div class="love-constellation" aria-hidden="true">✧ ♥ ✧</div>
+      <div class="open-when" aria-label="اختاري رسالة">
+        <button class="active" type="button" data-note="happy">لما تكوني فرحانة ☀</button>
+        <button type="button" data-note="sad">لما يومك يبقى صعب ☁</button>
+        <button type="button" data-note="miss">لما توحشيني ♡</button>
+        <button type="button" data-note="sleep">قبل ما تنامي ☾</button>
+      </div>
+      <div class="love-note">
+        <p id="loveMessage" aria-live="polite">فرحتك من أجمل الحاجات في الدنيا. أتمنى ضحكتك تفضل منوّرة أيامك دايمًا، وأبقى جنبك وأنا بشوفها يا روزتي.</p>
+      </div>
+      <div style="margin-top:26px">
+        <button type="button" class="primary" id="sendHearts">دوسي وخدي شوية حب ♥</button>
+      </div>
+      <div class="love-counter">
+        <h3>من يوم ما بدأت حكايتنا</h3>
+        <p>اختاروا تاريخ ليه معنى عندكم، وشوفوا عدى عليه قد إيه.</p>
+        <form id="dateForm" class="counter-inputs">
+          <input type="date" id="loveDate" aria-label="تاريخ بداية حكايتنا" required>
+          <button class="primary" type="submit">احسب حكايتنا ✦</button>
+        </form>
+        <p class="counter-output" id="counterOutput" aria-live="polite"></p>
+        <p>التاريخ بيتحفظ تلقائياً في جهازك.</p>
+      </div>
+    </section>
+  </main>
+
+  <div class="heart-layer" id="heartLayer" aria-hidden="true"></div>
+
+  <footer class="footer">
+    <b>حكايتنا <span style="color:#eba4a0">♥</span></b>
+    <span>معمول بحب من أحمد حسام، لأروى (روزتي) وبس.</span>
+    <span>حكاية تستاهل تتحكي ✦</span>
+  </footer>
+</div>
+
+<dialog class="modal" id="modal">
+  <h2>خلّيها حكايتكم ♡</h2>
+  <p>اكتب أساميكم عشان الصفحة تبقى أقرب ليكم وتفضل متفظة.</p>
+  <form id="namesForm">
+    <label for="first">اسمك</label>
+    <input id="first" maxlength="30" value="أحمد حسام" autocomplete="off">
+    <label for="second">اسم حبيبتك</label>
+    <input id="second" maxlength="30" value="أروى" autocomplete="off">
+    <div class="modal-actions">
+      <button class="primary" type="submit">حفظ الأسامي</button>
+      <button class="secondary" type="button" id="close">إلغاء</button>
+    </div>
+    <p class="notice">الأسامي بتتحفظ تلقائيًا في متصفحك.</p>
+  </form>
+</dialog>
+
+<script>
+// --- Safe Live Greeting ---
+(function(){
+  const hour = new Date().getHours();
+  const badge = document.getElementById('liveGreeting');
+  if (!badge) return;
+  if (hour >= 5 && hour < 12) {
+    badge.textContent = '☀️ صباح الورد والفل يا روزتي.. نهارك سعيد';
+  } else if (hour >= 12 && hour < 17) {
+    badge.textContent = '🌤️ نهارك هادي وجميل يا أروى.. ربنا يوفقك';
+  } else if (hour >= 17 && hour < 22) {
+    badge.textContent = '✨ مساء الدفا والحب يا قمر.. منورة الدنيا';
+  } else {
+    badge.textContent = '🌙 سهرة هادية وتصبحي على خير يا أجمل حكاية';
+  }
+})();
+
+// --- Surprise Reason Box ---
+const messages=[
+  'إنتِ النور اللي بيهوّن أي يوم طويل يا روزتي.',
+  'ضحكتك يا أروى من الحاجات اللي نفسي أفضل أشوفها دايمًا.',
+  'معاكي أبسط اللحظات بتبقى ليها حكاية وطعم تاني.',
+  'إنتِ غالية أوي عندي، أكتر من أي كلام ممكن يوصف.',
+  'نفسي كل أيامك تبقى مليانة راحة وفرح ونجاح.',
+  'قلبي بيبتسم لمجرد إنك في حياتي يا روزتي.',
+  'وجودك في يومي بيخلي أي تعب يهون وأي قلق يختفي.',
+  'أنا فخور بيكي وبكل خطوة بتعمليها عشان توصلي لحلمك يا دكتورتي.'
+];
+let index=0;
+const nextReasonBtn = document.getElementById('next');
+if (nextReasonBtn) {
+  nextReasonBtn.addEventListener('click', ()=>{
+    index=(index+1)%messages.length;
+    const reasonEl = document.getElementById('reason');
+    if (reasonEl) reasonEl.textContent=messages[index];
+  });
+}
+
+// --- Custom Names with LocalStorage ---
+const NAMES_KEY = 'hekayetna_names_v2';
+function applyNames(a, b) {
+  document.querySelectorAll('.name1').forEach(el=>el.textContent=a);
+  document.querySelectorAll('.name2').forEach(el=>el.textContent=b);
+  const f = document.getElementById('first');
+  const s = document.getElementById('second');
+  if (f) f.value = a;
+  if (s) s.value = b;
+}
+
+try {
+  const savedNames = JSON.parse(localStorage.getItem(NAMES_KEY));
+  if (savedNames && savedNames.a && savedNames.b) {
+    applyNames(savedNames.a, savedNames.b);
+  }
+} catch (_) {}
+
+const modal=document.getElementById('modal');
+const customizeBtn = document.getElementById('customize');
+const closeBtn = document.getElementById('close');
+const namesForm = document.getElementById('namesForm');
+
+if (customizeBtn && modal) customizeBtn.addEventListener('click',()=>modal.showModal());
+if (closeBtn && modal) closeBtn.addEventListener('click',()=>modal.close());
+if (namesForm) {
+  namesForm.addEventListener('submit',e=>{
+    e.preventDefault();
+    const a=(document.getElementById('first')?.value.trim())||'أحمد حسام';
+    const b=(document.getElementById('second')?.value.trim())||'أروى';
+    applyNames(a, b);
+    try { localStorage.setItem(NAMES_KEY, JSON.stringify({ a, b })); } catch (_) {}
+    if (modal) modal.close();
+  });
+}
+
+// --- Together Dates & Questions ---
+(function(){
+  const dates=[
+    'اختاروا فيلم بتحبوه، وحضّروا سناكس واتفرجوا سوا.',
+    'اعملوا بلاي ليست: كل واحد يختار ٣ أغاني بتفكره بالتاني.',
+    'اتمشّوا شوية، وكل واحد يحكي أحلى حاجة حصلتله الأسبوع ده.',
+    'حضّروا مشروب بتحبوه واقعدوا تحكوا من غير موبايلات نص ساعة.',
+    'اختاروا أكلة جديدة وجربوا تحضّروها سوا.',
+    'اعملوا تحدّي تصوير: كل واحد يصوّر ٣ حاجات فكرته بالتاني.',
+    'ارسموا بعض في دقيقتين وقارنوا النتيجة، حتى لو الرسم مضحك!',
+    'اكتبوا ٣ حاجات نفسكم تعملوها سوا في المستقبل.'
+  ];
+  const questions=[
+    'إيه لحظة بسيطة خلتك تبتسم النهارده؟',
+    'إيه أغنية بتفكرك بيا وليه؟',
+    'لو هنقضي يوم كامل سوا من غير أي التزامات، نفسك نعمل إيه؟',
+    'إيه أكتر حاجة صغيرة بتحسسك بالاهتمام؟',
+    'إيه مكان نفسك نزوره سوا يومًا ما؟',
+    'إيه أكتر حاجة بتحبها في طريقة كلامنا مع بعض؟',
+    'لو وصفت علاقتنا بكلمة واحدة، هتختار إيه؟',
+    'إيه حاجة جديدة نفسك نتعلمها مع بعض؟',
+    'إذكر ذكرى بتحب تفتكرها لما تكون محتاج تبتسم؟'
+  ];
+  let di=0,qi=0;
+  const nextDateBtn = document.getElementById('nextDate');
+  const nextQBtn = document.getElementById('nextQuestion');
+  if (nextDateBtn) {
+    nextDateBtn.addEventListener('click',()=>{
+      di=(di+1)%dates.length;
+      const el = document.getElementById('dateIdea');
+      if (el) el.textContent=dates[di];
+    });
+  }
+  if (nextQBtn) {
+    nextQBtn.addEventListener('click',()=>{
+      qi=(qi+1)%questions.length;
+      const el = document.getElementById('questionText');
+      if (el) el.textContent=questions[qi];
+    });
+  }
+})();
+
+// --- Memory & XO Games ---
+(function(){
+  const mg=document.getElementById('memoryGrid'),ms=document.getElementById('memoryStatus');
+  if (!mg || !ms) return;
+  const symbols=['♥','☾','✿','✦','☀','♫'];
+  let deck=[],open=[],pairs=0,tries=0,lock=false,timer=null;
+  function memoryStart(){
+    clearTimeout(timer);
+    deck=[...symbols,...symbols].map((v,i)=>({v,id:i}));
+    for(let i=deck.length-1;i>0;i--){
+      let j=Math.floor(Math.random()*(i+1));
+      [deck[i],deck[j]]=[deck[j],deck[i]];
+    }
+    open=[];pairs=0;tries=0;lock=false;
+    mg.replaceChildren();
+    ms.textContent='المحاولات: ٠ · الأزواج: ٠ من ٦';
+    deck.forEach((card,i)=>{
+      let b=document.createElement('button');
+      b.type='button';
+      b.className='memory-tile';
+      b.textContent='؟';
+      b.setAttribute('aria-label','كارت رقم '+(i+1));
+      b.addEventListener('click',()=>{
+        if(lock||b.classList.contains('open')||b.classList.contains('matched'))return;
+        b.textContent=card.v;
+        b.classList.add('open');
+        b.setAttribute('aria-label','كارت '+card.v);
+        open.push({b,card});
+        if(open.length===2){
+          tries++;
+          if(open[0].card.v===open[1].card.v){
+            open.forEach(x=>{x.b.classList.remove('open');x.b.classList.add('matched');x.b.disabled=true});
+            pairs++;
+            open=[];
+            ms.textContent=pairs===6?'برافو! لقيتوا كل الأزواج في '+tries+' محاولة ♡':'المحاولات: '+tries+' · الأزواج: '+pairs+' من ٦';
+          }else{
+            lock=true;
+            ms.textContent='المحاولات: '+tries+' · الأزواج: '+pairs+' من ٦';
+            timer=setTimeout(()=>{
+              open.forEach(x=>{x.b.classList.remove('open');x.b.textContent='؟';x.b.setAttribute('aria-label','كارت مقلوب')});
+              open=[];
+              lock=false;
+            },850);
+          }
+        }
+      });
+      mg.appendChild(b);
+    });
+  }
+  const memReset = document.getElementById('memoryReset');
+  if(memReset) memReset.addEventListener('click',memoryStart);
+  memoryStart();
+
+  const xg=document.getElementById('xoGrid'),xs=document.getElementById('xoStatus');
+  if (xg && xs) {
+    let board=[],turn='♡',done=false;
+    const wins=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    function xoStart(){
+      board=Array(9).fill('');
+      turn='♡';
+      done=false;
+      xg.replaceChildren();
+      xs.textContent='دور ♡';
+      board.forEach((_,i)=>{
+        const b=document.createElement('button');
+        b.type='button';
+        b.className='xo-cell';
+        b.setAttribute('aria-label','خانة '+(i+1));
+        b.addEventListener('click',()=>{
+          if(done||board[i])return;
+          board[i]=turn;
+          b.textContent=turn;
+          b.setAttribute('aria-label','خانة '+(i+1)+' '+turn);
+          b.disabled=true;
+          if(wins.some(line=>line.every(n=>board[n]===turn))){
+            done=true;
+            xs.textContent=turn+' كسب! جولة حلوة ♡';
+          }else if(board.every(Boolean)){
+            done=true;
+            xs.textContent='تعادل! واضح إنكم متفاهمين ♡';
+          }else{
+            turn=turn==='♡'?'✕':'♡';
+            xs.textContent='دور '+turn;
+          }
+        });
+        xg.appendChild(b);
+      });
+    }
+    const xoResetBtn = document.getElementById('xoReset');
+    if(xoResetBtn) xoResetBtn.addEventListener('click',xoStart);
+    xoStart();
+  }
+})();
+
+// --- Music & Robust YouTube / Audio Player ---
+(function(){
+  const player=document.getElementById('songPlayer');
+  const record=document.getElementById('record');
+  const fileInput=document.getElementById('songFile');
+  const errorEl=document.getElementById('audioError');
+  const nameEl=document.getElementById('trackName');
+  const ytBox=document.getElementById('ytPlayerBox');
+  const ytContainer=document.getElementById('youtubeEmbedContainer');
+  let objectUrl=null;
+
+  function stopEverything(){
+    if(player){
+      player.pause();
+      player.removeAttribute('src');
+      player.style.display='none';
+    }
+    if(ytBox) ytBox.classList.remove('active');
+    if(ytContainer) ytContainer.replaceChildren();
+    if(record) record.classList.remove('is-playing');
+    if(errorEl) errorEl.textContent='';
+    if(objectUrl){
+      URL.revokeObjectURL(objectUrl);
+      objectUrl=null;
+    }
+  }
+
+  function extractYouTubeId(urlStr){
+    if(!urlStr) return null;
+    let match = urlStr.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
+    if(match && match[1]) return match[1];
+    if(urlStr.trim().length === 11) return urlStr.trim();
+    return null;
+  }
+
+  function playYouTube(urlStr){
+    stopEverything();
+    const vidId = extractYouTubeId(urlStr);
+    if(!vidId){
+      if(errorEl) errorEl.textContent='رابط يوتيوب غير صالح. تأكد من صحة الرابط.';
+      return;
+    }
+    if(nameEl) nameEl.textContent='أغنية يوتيوب المختارة ♫';
+    if(ytBox) ytBox.classList.add('active');
+    if(ytContainer){
+      ytContainer.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + vidId + '?autoplay=1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
+    if(record) record.classList.add('is-playing');
+  }
+
+  function playLocalAudio(src, title){
+    stopEverything();
+    if(!player) return;
+    if(nameEl) nameEl.textContent=title;
+    player.style.display='block';
+    player.src=src;
+    player.load();
+    const attempt=player.play();
+    if(attempt && attempt.catch){
+      attempt.catch(()=>{
+        if(errorEl) errorEl.textContent='لو الأغنية ما اشتغلتش تلقائيًا، دوسوا تشغيل من المشغل.';
+      });
+    }
+    if(record) record.classList.add('is-playing');
+  }
+
+  const chooseBtn = document.getElementById('chooseSong');
+  if(chooseBtn && fileInput) {
+    chooseBtn.addEventListener('click',()=>fileInput.click());
+    fileInput.addEventListener('change',()=>{
+      const selected=fileInput.files && fileInput.files[0];
+      if(!selected)return;
+      if(selected.type && !selected.type.startsWith('audio/')){
+        if(errorEl) errorEl.textContent='اختاروا ملف صوتي صالح.';
+        fileInput.value='';
+        return;
+      }
+      const url=URL.createObjectURL(selected);
+      playLocalAudio(url, selected.name);
+      objectUrl=url;
+      fileInput.value='';
+    });
+  }
+
+  const trackForm = document.getElementById('trackForm');
+  if(trackForm) {
+    trackForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const val=(document.getElementById('trackUrl')?.value.trim())||'';
+      if(!val) return;
+      const vidId = extractYouTubeId(val);
+      if(vidId){
+        playYouTube(val);
+      } else {
+        try {
+          const u=new URL(val);
+          if(!['https:','http:'].includes(u.protocol)) throw new Error();
+          playLocalAudio(u.href, 'الأغنية عبر الرابط المباشر');
+        } catch(_) {
+          if(errorEl) errorEl.textContent='من فضلكم اكتبوا رابط يوتيوب صالح أو رابط http مباشر لملف صوتي.';
+        }
+      }
+    });
+  }
+
+  const clearSongBtn = document.getElementById('clearSong');
+  if(clearSongBtn) {
+    clearSongBtn.addEventListener('click',()=>{
+      stopEverything();
+      if(nameEl) nameEl.textContent='اختاروا أغنيتكم';
+      const trackUrlInput = document.getElementById('trackUrl');
+      if(trackUrlInput) trackUrlInput.value='';
+      if(fileInput) fileInput.value='';
+    });
+  }
+
+  if(player){
+    player.addEventListener('play',()=> { if(record) record.classList.add('is-playing'); });
+    player.addEventListener('pause',()=> { if(record) record.classList.remove('is-playing'); });
+    player.addEventListener('ended',()=> { if(record) record.classList.remove('is-playing'); });
+    player.addEventListener('error',()=>{
+      if(player.getAttribute('src')) {
+        if(errorEl) errorEl.textContent='الأغنية مش متاحة أو الصيغة مش مدعومة.';
+      }
+    });
+  }
+
+  window.addEventListener('pagehide',()=>{
+    if(objectUrl) URL.revokeObjectURL(objectUrl);
+  });
+})();
+
+// --- Love Notes & Hearts & Date Counter ---
+(function(){
+  const notes={
+    happy:'فرحتك من أجمل الحاجات في الدنيا. أتمنى ضحكتك تفضل منوّرة أيامك دايمًا، وأبقى جنبك وأنا بشوفها يا روزتي.',
+    sad:'خدي نفس براحة. مش لازم تكوني قوية طول الوقت؛ أنا هنا أسمعك وأطمن عليكي، ونعدّي اليوم خطوة خطوة.',
+    miss:'حتى لو بينا مسافة، إنتِ دايمًا قريبة من قلبي. مستني اللحظة اللي نتكلم فيها ونضحك كأن مفيش وقت فات.',
+    sleep:'تصبحي على راحة وسكينة. أتمنى أحلامك تكون خفيفة وحلوة، وبكرة يصحّيكي على يوم يليق بقلب الطيب يا أجمل دكتورة.'
+  };
+
+  document.querySelectorAll('[data-note]').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('[data-note]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const msgEl = document.getElementById('loveMessage');
+    if(msgEl) msgEl.textContent=notes[b.dataset.note];
+  }));
+
+  const sendHeartsBtn = document.getElementById('sendHearts');
+  if(sendHeartsBtn) {
+    sendHeartsBtn.addEventListener('click',()=>{
+      const msgEl = document.getElementById('loveMessage');
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+        if(msgEl) msgEl.textContent='شوية حب مخصوص ليكي يا أروى ♥ ♥ ♥';
+        return;
+      }
+      let layer=document.getElementById('heartLayer');
+      if(!layer) return;
+      for(let i=0;i<18;i++){
+        let heart=document.createElement('span');
+        heart.className='heart-float';
+        heart.textContent=['♥','♡','✦'][i%3];
+        heart.style.left=(Math.random()*92)+'%';
+        heart.style.fontSize=(14+Math.random()*22)+'px';
+        heart.style.animationDelay=(Math.random()*0.6)+'s';
+        layer.appendChild(heart);
+        setTimeout(()=>heart.remove(),3800);
+      }
+    });
+  }
+
+  const DATE_KEY = 'hekayetna_love_date_v1';
+  const dateInput = document.getElementById('loveDate');
+  const counterOut = document.getElementById('counterOutput');
+  const dateForm = document.getElementById('dateForm');
+
+  if(dateInput && counterOut && dateForm) {
+    try {
+      const savedDate = localStorage.getItem(DATE_KEY);
+      if(savedDate) dateInput.value = savedDate;
+    } catch(_) {}
+
+    dateForm.addEventListener('submit',e=>{
+      e.preventDefault();
+      const val=dateInput.value;
+      if(!val){
+        counterOut.textContent='اختاروا التاريخ الأول.';
+        return;
+      }
+      try { localStorage.setItem(DATE_KEY, val); } catch(_) {}
+      const p=val.split('-').map(Number);
+      const then=Date.UTC(p[0],p[1]-1,p[2]);
+      const now=new Date();
+      const today=Date.UTC(now.getFullYear(),now.getMonth(),now.getDate());
+      const diff=Math.floor((today-then)/86400000);
+      if(diff<0){
+        counterOut.textContent='التاريخ ده لسه مجاش، اختاروا يوم فات أو النهارده ♡';
+        return;
+      }
+      counterOut.textContent=diff===0?'النهارده بداية حكاية جميلة وجديدة بينكم ♡':'عدّى '+new Intl.NumberFormat('ar-EG').format(diff)+' يوم على اليوم المميز ده ♡';
+    });
+  }
+})();
+
+// --- 1. Capsule الزمن ---
+(function(){
+  const waxEnvelope = document.getElementById('waxEnvelope');
+  const futureLetter = document.getElementById('futureLetter');
+  if(!waxEnvelope || !futureLetter) return;
+
+  function openFutureLetter() {
+    waxEnvelope.style.display = 'none';
+    futureLetter.classList.add('opened');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const layer = document.getElementById('heartLayer');
+      if(layer){
+        for (let i = 0; i < 15; i++) {
+          const h = document.createElement('span');
+          h.className = 'heart-float';
+          h.textContent = ['♥','✦','🎓'][i % 3];
+          h.style.left = (15 + Math.random() * 70) + '%';
+          h.style.fontSize = (16 + Math.random() * 20) + 'px';
+          h.style.animationDelay = (Math.random() * 0.4) + 's';
+          layer.appendChild(h);
+          setTimeout(() => h.remove(), 3800);
+        }
+      }
+    }
+  }
+
+  const sealBtn = document.getElementById('breakSealBtn');
+  const openSealTextBtn = document.getElementById('openSealTextBtn');
+  const resealBtn = document.getElementById('resealBtn');
+
+  if(sealBtn) sealBtn.addEventListener('click', openFutureLetter);
+  if(openSealTextBtn) openSealTextBtn.addEventListener('click', openFutureLetter);
+  if(resealBtn) resealBtn.addEventListener('click', () => {
+    futureLetter.classList.remove('opened');
+    waxEnvelope.style.display = 'block';
+  });
+})();
+
+// --- 2. مقياس الحب ومزاج روزتي ---
+(function(){
+  const moodsData = {
+    happy: {
+      reply: 'يا رب دايمًا مبسوطة وضحكتك مالية الدنيا يا روزتي! فرحتك بتفرح قلبي أضعاف، وبحب أشوف عيونك بتلمع من السعادة.',
+      suggestion: 'اقتراح أحمد لمودك دلوقتي: شغّلي أكتر أغنية مبهجة بتحبيها في قسم "أغنيتنا"، واكتبي سبب فرحتك النهارده عشان نفتكره سوا ♫',
+      treat: 'جرعة الدلع: ليكي عند أحمد خروجة احتفال على ذوقك أول ما نتقابل + أحلى حاجة حلوة بتحبيها 🍓♥'
+    },
+    stressed: {
+      reply: 'اهدي يا حبيبتي وخدي نفس عميق.. إنتِ بتعملي اللي عليكي وزيادة، وأنا فخور بمجهودك أوي. مش مطلوب منك الكمال، مطلوب بس تكملي بهدوء.',
+      suggestion: 'اقتراح أحمد لمودك دلوقتي: اقفلي الكتاب ١٠ دقايق، اعملي مشروب دافي بتحبيه، واسحبي ورقة تشجيع من برطمان السعادة تحت ☕',
+      treat: 'جرعة الدلع: إعفاء رسمي من التوتر لمدة ساعة + دعوة حلوة من قلبي إن ربنا يفتح عليكي ويسهلك كل صعب 🤲♡'
+    },
+    tender: {
+      reply: 'تعالي هنا في قلبي.. مهما الدنيا ضايقتك أو حسيتي بتعب، أنا جنبك ومعاكي في كل خطوة. إنتِ أغلى إنسانة عندي ومستحيل أسيبك لوحدك.',
+      suggestion: 'اقتراح أحمد لمودك دلوقتي: ابعتيلي رسالة قوليلي فيها كل اللي مضايقك، وأنا معاكي دايماً 🤍',
+      treat: 'جرعة الدلع: مكالمة طويلة أسمعك فيها بكل حب من غير أي استعجال لحد ما قلبك يرتاح ويضحك ♥'
+    },
+    miss: {
+      reply: 'وإنتِ وحشاني أكتر بكتير يا أروى.. مفيش لحظة بتعدي من غير ما تيجي على بالي، ومستني أقرب وقت أشوفك فيه وأشبع من كلامك.',
+      suggestion: 'اقتراح أحمد لمودك دلوقتي: افتحي قسم "افتحيها لما تحتاجي" واختاري رسالة "لما توحشيني"، وشوفي عداد أيامنا سوا 💌',
+      treat: 'جرعة الدلع: وعد بأقرب معاد نشوف بعض فيه قريب جدًا ونقضي وقت حلو يعوض أي غياب ✦'
+    },
+    laugh: {
+      reply: 'يلا بينا نفرفش! ضحكتك هي أحلى مزيكا في الدنيا، ومستعد أعمل أي حاجة عشان أشوفك بتضحكي من قلبك.',
+      suggestion: 'اقتراح أحمد لمودك دلوقتي: ادخلي على قسم "يلا نلعب سوا" وجربي لعبة لمّوا القلوب أو إكس وأو، أو اسحبي فكرة مجنونة ✨',
+      treat: 'جرعة الدلع: تحدي رسم أو لعبة خفيفة بينا أول ما نتكلم، واللي يخسر يعزم التاني على آيس كريم 🍦😄'
+    },
+    calm: {
+      reply: 'الهدوء والروقان يليق بيكي أوي يا روزتي.. بحب حالتك لما تكوني رايقة ومطمنة، كإن الدنيا كلها بتاخد هدنة معاكي.',
+      suggestion: 'اقتراح أحمد لمودك دلوقتي: شغّلي مزيكا هادية في الخلفية، واقري النجوم المضيئة في سماء حكايتنا تحت 🌙',
+      treat: 'جرعة الدلع: قعدة رايقة مع قهوة أو شاي بالنعناع وحكايات هادية من القلب للقلب ☕🌿'
+    }
+  };
+
+  let activeMoodKey = 'happy';
+  const replyEl = document.getElementById('moodReplyText');
+  const suggEl = document.getElementById('moodSuggestion');
+  const treatEl = document.getElementById('moodTreatResult');
+
+  document.querySelectorAll('#moodGrid .mood-card-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('#moodGrid .mood-card-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeMoodKey = btn.dataset.moodKey;
+      const data = moodsData[activeMoodKey];
+      if(replyEl) replyEl.textContent = data.reply;
+      if(suggEl) suggEl.innerHTML = '<strong>اقتراح أحمد لمودك دلوقتي:</strong> ' + data.suggestion.replace('اقتراح أحمد لمودك دلوقتي: ','');
+      if(treatEl) treatEl.textContent = '';
+    });
+  });
+
+  const moodTreatBtn = document.getElementById('moodTreatBtn');
+  if(moodTreatBtn) {
+    moodTreatBtn.addEventListener('click', () => {
+      if(treatEl) treatEl.textContent = moodsData[activeMoodKey].treat;
+    });
+  }
+})();
+
+// --- 3. شريط محطات حكايتنا مع LocalStorage ---
+(function(){
+  const list = document.getElementById('timelineList');
+  const STORAGE_KEY = 'hekayetna_custom_milestones_v2';
+  if(!list) return;
+
+  function renderCustomMilestone(item) {
+    const art = document.createElement('article');
+    art.className = 'timeline-item';
+    const dot = document.createElement('span');
+    dot.className = 'timeline-dot';
+    const date = document.createElement('span');
+    date.className = 'timeline-date';
+    date.textContent = item.date;
+    const h3 = document.createElement('h3');
+    h3.textContent = item.title;
+    const p = document.createElement('p');
+    p.textContent = item.desc;
+    art.append(dot, date, h3, p);
+    list.appendChild(art);
+  }
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    if (Array.isArray(saved)) saved.forEach(renderCustomMilestone);
+  } catch (_) {}
+
+  const milestoneForm = document.getElementById('milestoneForm');
+  if(milestoneForm) {
+    milestoneForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const title = document.getElementById('msTitle').value.trim();
+      const date = document.getElementById('msDate').value.trim();
+      const desc = document.getElementById('msDesc').value.trim();
+      if (!title || !date || !desc) return;
+      const entry = { title, date, desc };
+      renderCustomMilestone(entry);
+      try {
+        const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        existing.push(entry);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+      } catch (_) {}
+      milestoneForm.reset();
+    });
+  }
+})();
+
+// --- 4. نجوم السماء التفاعلية ---
+(function(){
+  const starsData = [
+    { x: 14, y: 24, icon: '✦', title: 'نجمة الضحكة الصافية', text: 'ضحكتك العفوية اللي بتخلي أي زعل يختفي في ثانية وترد الروح في قلبي يا أروى.' },
+    { x: 30, y: 65, icon: '★', title: 'نجمة الحنية والاهتمام', text: 'سؤالك وتفاصيلك الصغيرة اللي بتحسسني إني أهم شخص في الدنيا.' },
+    { x: 46, y: 22, icon: '✧', title: 'نجمة الطموح والشطارة', text: 'إصرارك على حلمك واجتهادك اللي بيخليني أفتخر بيكي قدام الدنيا كلها.' },
+    { x: 64, y: 58, icon: '✦', title: 'نجمة الكلام اللي ما يخلصش', text: 'راحتنا وإحنا بنحكي في أتفه التفاصيل وأكبر الأحلام من غير أي تجميل.' },
+    { x: 82, y: 28, icon: '★', title: 'نجمة الأمان والسكينة', text: 'إن وجودك في حياتي هو أهدى وأأمن مكان بلجأ ليه وقت التعب.' },
+    { x: 22, y: 45, icon: '✧', title: 'نجمة العيون الحلوة', text: 'اللمعة اللي في عيونك لما بتفرحي أو بتحكي عن حاجة بتحبيها.' },
+    { x: 54, y: 78, icon: '✦', title: 'نجمة الجدعنة والسند', text: 'وقفتك جنبي وتشجيعك ليا في كل خطوة وكل تحدي بنعدّي بيه.' },
+    { x: 75, y: 76, icon: '★', title: 'نجمة المستقبل سوا', text: 'كل حلم لسه هنحققه بإيدينا، وكل يوم جاي وإنتِ معايا يا روزتي.' }
+  ];
+
+  const sky = document.getElementById('skyCanvas');
+  const titleEl = document.getElementById('starTitle');
+  const textEl = document.getElementById('starText');
+  if(!sky || !titleEl || !textEl) return;
+
+  starsData.forEach((st, idx) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'sky-star-btn';
+    btn.style.left = st.x + '%';
+    btn.style.top = st.y + '%';
+    btn.textContent = st.icon;
+    btn.setAttribute('aria-label', st.title);
+    btn.addEventListener('click', () => {
+      sky.querySelectorAll('.sky-star-btn').forEach(b => b.classList.remove('lit'));
+      btn.classList.add('lit');
+      titleEl.textContent = '✨ ' + st.title;
+      textEl.textContent = st.text;
+    });
+    sky.appendChild(btn);
+  });
+})();
+
+// --- 5. اختبار التوافق ---
+(function(){
+  const questions = [
+    {
+      q: 'إيه أكتر حاجة بتفرح قلب أحمد لما يشوفها في أروى؟',
+      opts: ['ضحكتك العفوية من القلب', 'هدوءها وقت التركيز', 'كل تفاصيلها على بعضها ♥'],
+      best: 2
+    },
+    {
+      q: 'لما روزتي تكون مضغوطة من المذاكرة، إيه أحلى حل يروقها؟',
+      opts: ['كلمة تشجيع دافئة ومشروب بتحبه', 'تنام وتنسى الكتاب خالص', 'تذاكر ٥ ساعات زيادة'],
+      best: 0
+    },
+    {
+      q: 'إيه أحلى خروجة مثالية تجمع بينا في يوم فاضي؟',
+      opts: ['نتمشى في هدوء ونشرب قهوة ونحكي', 'نروح مكان زحمة وصوته عالي', 'نقعد ساكتين نبص في الموبايل'],
+      best: 0
+    },
+    {
+      q: 'أكتر وصف يليق بعلاقتنا وحكايتنا سوا هو إيه؟',
+      opts: ['راحة وأمان وضحكة حلوة', 'روتين عادي زي أي حد', 'منافسة مين يكسب التاني'],
+      best: 0
+    },
+    {
+      q: 'لما يحصل أي سوء تفاهم بسيط بينا، المفروض يحصل إيه؟',
+      opts: ['نتكلم بهدوء ونصفي قلوبنا فورًا', 'نفضل زعلانين بالأيام', 'نستنى مين هيعند أكتر'],
+      best: 0
+    },
+    {
+      q: 'إيه أجمل وعد مستنين نحققه سوا بعد الامتحانات؟',
+      opts: ['نحتفل بنجاحنا ونعيش أحلى ذكريات', 'ننسى كل اللي فات', 'نرجع نذاكر تاني من الأول'],
+      best: 0
+    }
+  ];
+
+  let currentQ = 0;
+  let score = 0;
+  const playArea = document.getElementById('quizPlayArea');
+  const resultArea = document.getElementById('quizResultArea');
+  const stepText = document.getElementById('quizStepText');
+  const barFill = document.getElementById('quizBarFill');
+  const qEl = document.getElementById('quizQuestion');
+  const optsEl = document.getElementById('quizOptions');
+  if(!playArea || !qEl || !optsEl) return;
+
+  function renderQuestion() {
+    const item = questions[currentQ];
+    const arNums = ['١','٢','٣','٤','٥','٦'];
+    if(stepText) stepText.textContent = 'السؤال ' + arNums[currentQ] + ' من ٦';
+    if(barFill) barFill.style.width = (((currentQ + 1) / questions.length) * 100) + '%';
+    qEl.textContent = item.q;
+    optsEl.replaceChildren();
+
+    item.opts.forEach((optText, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'quiz-opt';
+      btn.textContent = optText;
+      btn.addEventListener('click', () => {
+        btn.classList.add('selected');
+        if (idx === item.best) score++;
+        setTimeout(() => {
+          currentQ++;
+          if (currentQ < questions.length) {
+            renderQuestion();
+          } else {
+            showResult();
+          }
+        }, 280);
+      });
+      optsEl.appendChild(btn);
+    });
+  }
+
+  function showResult() {
+    playArea.style.display = 'none';
+    if(resultArea) resultArea.style.display = 'block';
+    const pct = Math.max(92, Math.round((score / questions.length) * 100));
+    const scoreTitle = document.getElementById('certScoreTitle');
+    const certDesc = document.getElementById('certDesc');
+    if(scoreTitle) scoreTitle.textContent = 'نسبة التوافق: ' + new Intl.NumberFormat('ar-EG').format(pct) + '٪ ♥';
+    if(certDesc) certDesc.textContent = 'تشهد هذه الصفحة بأن أحمد حسام وأروى (روزتي) ثنائي متفاهم لأبعد حد، وإن قلوبهم دايمًا بتلاقي بعض في أبسط التفاصيل وأجمل اللحظات!';
+  }
+
+  const restartQuizBtn = document.getElementById('restartQuizBtn');
+  if(restartQuizBtn) {
+    restartQuizBtn.addEventListener('click', () => {
+      currentQ = 0;
+      score = 0;
+      if(resultArea) resultArea.style.display = 'none';
+      if(playArea) playArea.style.display = 'block';
+      renderQuestion();
+    });
+  }
+
+  renderQuestion();
+})();
+
+// --- 6. العداد التنازلي مع LocalStorage ---
+(function(){
+  const CD_KEY = 'hekayetna_countdown_v2';
+  let targetEvent = {
+    name: '🎓 الاحتفال بنهاية الامتحانات وبداية أجمل إجازة',
+    iso: new Date(Date.now() + 45 * 86400000).toISOString().slice(0, 16)
+  };
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(CD_KEY));
+    if (saved && saved.name && saved.iso) targetEvent = saved;
+  } catch (_) {}
+
+  const titleEl = document.getElementById('cdEventTitle');
+  const dEl = document.getElementById('cdDays');
+  const hEl = document.getElementById('cdHours');
+  const mEl = document.getElementById('cdMins');
+  const sEl = document.getElementById('cdSecs');
+  const statusEl = document.getElementById('cdStatusMsg');
+  const nameInput = document.getElementById('cdNameInput');
+  const dateInput = document.getElementById('cdDateInput');
+  if(!titleEl || !dEl) return;
+
+  titleEl.textContent = targetEvent.name;
+  if(nameInput) nameInput.value = targetEvent.name;
+  if(dateInput) dateInput.value = targetEvent.iso;
+
+  const fmt = new Intl.NumberFormat('ar-EG', { minimumIntegerDigits: 2 });
+
+  function updateTimer() {
+    const targetMs = new Date(targetEvent.iso).getTime();
+    const diff = targetMs - Date.now();
+    if (isNaN(targetMs) || diff <= 0) {
+      dEl.textContent = fmt.format(0);
+      hEl.textContent = fmt.format(0);
+      mEl.textContent = fmt.format(0);
+      sEl.textContent = fmt.format(0);
+      if(statusEl) statusEl.textContent = 'اليوم المنتظر جه أخيرًا! ألف مبروك يا روزتي ♥';
+      return;
+    }
+    if(statusEl) statusEl.textContent = '';
+    const days = Math.floor(diff / 86400000);
+    const hours = Math.floor((diff % 86400000) / 3600000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
+    dEl.textContent = new Intl.NumberFormat('ar-EG').format(days);
+    if(hEl) hEl.textContent = fmt.format(hours);
+    if(mEl) mEl.textContent = fmt.format(mins);
+    if(sEl) sEl.textContent = fmt.format(secs);
+  }
+
+  const cdForm = document.getElementById('cdForm');
+  if(cdForm) {
+    cdForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const n = (nameInput?.value.trim()) || 'يومنا المميز سوا ♥';
+      const d = dateInput?.value;
+      if (!d) return;
+      targetEvent = { name: n, iso: d };
+      titleEl.textContent = n;
+      try { localStorage.setItem(CD_KEY, JSON.stringify(targetEvent)); } catch (_) {}
+      updateTimer();
+    });
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+})();
+
+// --- 7. دفتر صورنا المصور (Polaroid) مع LocalStorage ---
+(function(){
+  const grid = document.getElementById('polaroidGrid');
+  const STORAGE_KEY = 'hekayetna_polaroids_v1';
+  if(!grid) return;
+
+  function renderPolaroid(item) {
+    const art = document.createElement('article');
+    art.className = 'polaroid-card';
+    const wrap = document.createElement('div');
+    wrap.className = 'polaroid-img-wrap';
+    if(item.url) {
+      const img = document.createElement('img');
+      img.src = item.url;
+      img.alt = item.title;
+      img.onerror = function(){ this.style.display='none'; };
+      wrap.appendChild(img);
+    }
+    const span = document.createElement('span');
+    span.textContent = item.url ? '♥' : '📸';
+    wrap.appendChild(span);
+
+    const h3 = document.createElement('h3');
+    h3.className = 'polaroid-caption';
+    h3.textContent = item.title;
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'polaroid-date';
+    dateSpan.textContent = 'ذكرى مضافة بكل حب';
+
+    art.append(wrap, h3, dateSpan);
+    grid.appendChild(art);
+  }
+
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+    if(Array.isArray(saved)) saved.forEach(renderPolaroid);
+  } catch(_) {}
+
+  const form = document.getElementById('polaroidForm');
+  if(form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const title = document.getElementById('pTitle').value.trim();
+      const url = document.getElementById('pUrl').value.trim();
+      if(!title) return;
+      const entry = { title, url };
+      renderPolaroid(entry);
+      try {
+        const existing = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+        existing.push(entry);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(existing));
+      } catch(_) {}
+      form.reset();
+    });
+  }
+})();
+
+// --- 8. ركن "أنا دايماً في ضهرك" ---
+(function(){
+  const supportMsgs = [
+    "يا رب يوفقك ويفتحها عليكِ يا أروى، وتعدي كل امتحان وأنتِ منورة ومحققة أعلى الدرجات.",
+    "مفتخر بيكِ وبكل خطوة بتمشيها في طريق حلمك.. كملي وربنا معاكِ.",
+    "التعب بيروح والنجاح بيفضل.. اهدي وخدي نفس عميق، أنا في ضهرك دايماً.",
+    "دكتورتنا الجميله قدها وقد وزيادة، وربنا مش هيضيع تعبك أبدًا.",
+    "مهما كانت الليلة طويلة، بكرة صبحها أبيض ومليان فرحة ونجاح.",
+    "ضحكتك بالدنيا كلها، ومفيش امتحان يقدر يوقف طموحك وشطارتك."
+  ];
+  let sIdx = 0;
+  const display = document.getElementById('supportDisplay');
+  const btn = document.getElementById('nextSupportBtn');
+  if(display && btn) {
+    btn.addEventListener('click', () => {
+      sIdx = (sIdx + 1) % supportMsgs.length;
+      display.textContent = '"' + supportMsgs[sIdx] + '"';
+    });
+  }
+})();
+
+// --- 9. لعبة جمع القلوب السريعة ---
+(function(){
+  const canvas = document.getElementById('catchCanvas');
+  const startBtn = document.getElementById('startCatchBtn');
+  const leftBtn = document.getElementById('leftBtn');
+  const rightBtn = document.getElementById('rightBtn');
+  const scoreEl = document.getElementById('catchScore');
+  const bestEl = document.getElementById('catchBest');
+  if(!canvas || !startBtn) return;
+
+  const ctx = canvas.getContext('2d');
+  let score = 0;
+  let best = 0;
+  try { best = parseInt(localStorage.getItem('hekayetna_catch_best_v1') || '0', 10); } catch(_) {}
+  if(bestEl) bestEl.textContent = 'أعلى نتيجة: ' + new Intl.NumberFormat('ar-EG').format(best);
+
+  let gameRunning = false;
+  let basket = { x: 320, y: 300, w: 90, h: 20, speed: 12 };
+  let items = [];
+  let frameCount = 0;
+
+  function resetGame() {
+    score = 0;
+    if(scoreEl) scoreEl.textContent = 'النتيجة: ٠';
+    items = [];
+    basket.x = canvas.width / 2 - basket.w / 2;
+  }
+
+  function spawnItem() {
+    const types = ['♥', '★', '💎', '🌸'];
+    const type = types[Math.floor(Math.random() * types.length)];
+    items.push({
+      x: Math.random() * (canvas.width - 30) + 15,
+      y: -20,
+      speed: 2.2 + Math.random() * 2.2,
+      type: type,
+      size: 24
+    });
+  }
+
+  function loop() {
+    if(!gameRunning) return;
+    frameCount++;
+    if(frameCount % 45 === 0) spawnItem();
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw basket
+    ctx.fillStyle = '#e4a19e';
+    ctx.beginPath();
+    ctx.roundRect(basket.x, basket.y, basket.w, basket.h, 10);
+    ctx.fill();
+    ctx.fillStyle = '#543439';
+    ctx.font = '12px Cairo';
+    ctx.fillText('طبق الحبايب ♡', basket.x + 12, basket.y + 15);
+
+    // Update & draw items
+    for(let i = items.length - 1; i >= 0; i--) {
+      let it = items[i];
+      it.y += it.speed;
+
+      ctx.font = it.size + 'px serif';
+      ctx.fillText(it.type, it.x, it.y);
+
+      // Collision with basket
+      if(
+        it.y + 10 >= basket.y &&
+        it.y - 10 <= basket.y + basket.h &&
+        it.x >= basket.x - 10 &&
+        it.x <= basket.x + basket.w + 10
+      ) {
+        score += 10;
+        if(scoreEl) scoreEl.textContent = 'النتيجة: ' + new Intl.NumberFormat('ar-EG').format(score);
+        if(score > best) {
+          best = score;
+          if(bestEl) bestEl.textContent = 'أعلى نتيجة: ' + new Intl.NumberFormat('ar-EG').format(best);
+          try { localStorage.setItem('hekayetna_catch_best_v1', String(best)); } catch(_) {}
+        }
+        items.splice(i, 1);
+        continue;
+      }
+
+      // Out of bounds
+      if(it.y > canvas.height + 30) {
+        items.splice(i, 1);
+      }
+    }
+
+    requestAnimationFrame(loop);
+  }
+
+  startBtn.addEventListener('click', () => {
+    resetGame();
+    gameRunning = true;
+    startBtn.textContent = 'جاري اللعب.. 🎮';
+    loop();
+  });
+
+  window.addEventListener('keydown', e => {
+    if(!gameRunning) return;
+    if(e.key === 'ArrowLeft' || e.key === 'a') {
+      basket.x = Math.max(0, basket.x - basket.speed * 2.2);
+    } else if(e.key === 'ArrowRight' || e.key === 'd') {
+      basket.x = Math.min(canvas.width - basket.w, basket.x + basket.speed * 2.2);
+    }
+  });
+
+  if(leftBtn) {
+    leftBtn.addEventListener('click', () => { basket.x = Math.max(0, basket.x - 35); });
+  }
+  if(rightBtn) {
+    rightBtn.addEventListener('click', () => { basket.x = Math.min(canvas.width - basket.w, basket.x + 35); });
+  }
+
+  // Touch support for canvas
+  canvas.addEventListener('touchmove', e => {
+    if(!gameRunning) return;
+    const rect = canvas.getBoundingClientRect();
+    const touchX = e.touches[0].clientX - rect.left;
+    basket.x = Math.max(0, Math.min(canvas.width - basket.w, touchX - basket.w / 2));
+    e.preventDefault();
+  }, { passive: false });
+})();
+
+// --- Coupons & Wishlist Persistence ---
+(function(){
+  const COUPONS_KEY = 'hekayetna_coupons_v2';
+  let redeemedSet = [];
+  try { redeemedSet = JSON.parse(localStorage.getItem(COUPONS_KEY) || '[]'); } catch (_) {}
+
+  document.querySelectorAll('.coupon-ticket').forEach((ticket, idx) => {
+    const btn = ticket.querySelector('.coupon-btn');
+    if(!btn) return;
+    if (redeemedSet.includes(idx)) {
+      ticket.classList.add('redeemed');
+      btn.textContent = 'اتحجز لروزتي ✓';
+      btn.disabled = true;
+    }
+    btn.addEventListener('click', () => {
+      if (ticket.classList.contains('redeemed')) return;
+      ticket.classList.add('redeemed');
+      btn.textContent = 'اتحجز لروزتي ✓';
+      btn.disabled = true;
+      if (!redeemedSet.includes(idx)) {
+        redeemedSet.push(idx);
+        try { localStorage.setItem(COUPONS_KEY, JSON.stringify(redeemedSet)); } catch (_) {}
+      }
+    });
+  });
+
+  const WISH_KEY = 'hekayetna_wishes_v2';
+  const wishList = document.getElementById('wishList');
+  if(!wishList) return;
+
+  function saveWishes() {
+    const items = Array.from(wishList.querySelectorAll('.wish-item')).map(li => ({
+      text: li.querySelector('.wish-text').textContent,
+      done: li.classList.contains('done')
+    }));
+    try { localStorage.setItem(WISH_KEY, JSON.stringify(items)); } catch (_) {}
+  }
+
+  function bindWishToggle(item) {
+    const toggle = () => {
+      const isDone = item.classList.toggle('done');
+      item.setAttribute('aria-checked', String(isDone));
+      saveWishes();
+    };
+    item.addEventListener('click', toggle);
+    item.addEventListener('keydown', e => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  }
+
+  function createWishElement(textVal, isDone) {
+    const li = document.createElement('li');
+    li.className = 'wish-item' + (isDone ? ' done' : '');
+    li.tabIndex = 0;
+    li.setAttribute('role', 'checkbox');
+    li.setAttribute('aria-checked', String(!!isDone));
+    const check = document.createElement('span');
+    check.className = 'wish-check';
+    check.textContent = '✓';
+    const text = document.createElement('span');
+    text.className = 'wish-text';
+    text.textContent = textVal;
+    li.append(check, text);
+    bindWishToggle(li);
+    return li;
+  }
+
+  try {
+    const savedWishes = JSON.parse(localStorage.getItem(WISH_KEY));
+    if (Array.isArray(savedWishes) && savedWishes.length > 0) {
+      wishList.replaceChildren();
+      savedWishes.forEach(w => wishList.appendChild(createWishElement(w.text, w.done)));
+    } else {
+      wishList.querySelectorAll('.wish-item').forEach(bindWishToggle);
+    }
+  } catch (_) {
+    wishList.querySelectorAll('.wish-item').forEach(bindWishToggle);
+  }
+
+  const wishForm = document.getElementById('wishForm');
+  if(wishForm) {
+    wishForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const input = document.getElementById('wishInput');
+      if(!input) return;
+      const val = input.value.trim();
+      if (!val) return;
+      wishList.prepend(createWishElement(val, false));
+      saveWishes();
+      input.value = '';
+    });
+  }
+})();
+</script>
+</body>
+</html>
